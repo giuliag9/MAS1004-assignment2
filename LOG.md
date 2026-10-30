@@ -13,3 +13,6 @@ End the log with your plan for what to try next.
 - validation: 0.000 (before: 0.000)
 - what it means: what you think the result says
 -->
+
+## What tells the cities apart (Step 1, first look at the photos)
+it seems like the outisde locations tells the city apart, however there are also many photos inside or of food
