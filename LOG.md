@@ -22,4 +22,4 @@ as well as photo of object. maybe the text present in the photo tell the city ap
 - changed: nothing, the starter recipe, trained with seeds 0 and 1
 - why: I trained the starter recipe with seed 0 and 1 and the tag baseline as the step 2 said. After doing step 1 and looked at the photos I noted what could tell the cities apart, but decided to first train the starter recipe and later make changes. In step 3 I can look at the mistake ofthe starter recipe, and have a better idea for the changes.
 - validation: 0.4961 (seed 0), 0.4922 (seed 1)
-- what it means: 
+- what it means: From what I understood, a seed changes the random starting point, so it's telling me there is a slight difference based on where the starting point it, but i'm not sure is telling much else since it is a very small change.
