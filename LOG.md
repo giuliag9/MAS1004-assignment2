@@ -16,3 +16,4 @@ End the log with your plan for what to try next.
 
 ## What tells the cities apart (Step 1, first look at the photos)
 it seems like the outisde locations tells the city apart, however there are also many photos inside or of food
+as well as photo of object. maybe the text present in the photo tell the city apart too
