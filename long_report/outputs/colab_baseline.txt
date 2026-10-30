@@ -1,0 +1,37 @@
+[1/2] python src/official.py --tag baseline --seed 0
+Track A, seed 0, on cuda: all training photos (seoul 11274, busan 5191, tokyo 13347, osaka 7200, taipei 7245)
+3906 steps of 64 photos = 249,984 photos through the network
+  step   390/3906  loss 1.436  (196s)
+  step   780/3906  loss 1.290  (379s)
+  step  1170/3906  loss 1.190  (559s)
+  step  1560/3906  loss 1.127  (738s)
+  step  1950/3906  loss 1.074  (923s)
+  step  2340/3906  loss 0.996  (1105s)
+  step  2730/3906  loss 0.944  (1286s)
+  step  3120/3906  loss 0.860  (1475s)
+  step  3510/3906  loss 0.822  (1661s)
+  step  3900/3906  loss 0.781  (1842s)
+  step  3906/3906  loss 0.818  (1845s)
+
+validation score 0.496  (seoul 0.577, busan 0.376, tokyo 0.626, osaka 0.343, taipei 0.558)
+training took 30.7 min; wrote /content/drive/MyDrive/mas1004/assignment2/results/baseline_seed0/model.onnx
+
+[2/2] python src/official.py --tag baseline --seed 1
+Track A, seed 1, on cuda: all training photos (seoul 11274, busan 5191, tokyo 13347, osaka 7200, taipei 7245)
+3906 steps of 64 photos = 249,984 photos through the network
+  step   390/3906  loss 1.422  (182s)
+  step   780/3906  loss 1.283  (362s)
+  step  1170/3906  loss 1.190  (542s)
+  step  1560/3906  loss 1.122  (720s)
+  step  1950/3906  loss 1.071  (900s)
+  step  2340/3906  loss 0.991  (1079s)
+  step  2730/3906  loss 0.945  (1259s)
+  step  3120/3906  loss 0.856  (1453s)
+  step  3510/3906  loss 0.819  (1636s)
+  step  3900/3906  loss 0.774  (1821s)
+  step  3906/3906  loss 0.759  (1823s)
+
+validation score 0.492  (seoul 0.562, busan 0.387, tokyo 0.606, osaka 0.374, taipei 0.532)
+training took 30.4 min; wrote /content/drive/MyDrive/mas1004/assignment2/results/baseline_seed1/model.onnx
+
+All queued runs are done.
