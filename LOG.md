@@ -30,3 +30,4 @@ this is what i noticed by looking at the sheets. For Busan it seems like it make
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
 - why validation and leaderboard differ (first thought): it is different because the images are different, not the ones on which the starter recipe trained on
+- why validation and leaderboard differ (after talking about it): the reason why the valiadation on leader board is different might be because the images are not similar to the one in validation
