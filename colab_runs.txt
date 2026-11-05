@@ -1,1 +1,2 @@
-python src/curate.py mistakes results/baseline_seed0/model.onnx --every 2
+python src/official.py --quick
+python src/official.py --tag more_often_outside
