@@ -37,7 +37,7 @@ this is what i noticed by looking at the sheets. For Busan it seems like it make
 - changed: back to the starter recipe (more_often_outside undone), then in sample_weights every city drawn equally often: each photo gets one over the number of photos of its city
 - why: let's try to make the model train on the same amount of photo for each city. It could be useful for the model to train equally on each city photos, and it could be a good point for then observing changes and what mistakes it makes in that condition
 - validation: 0.5117 (before: 0.4961, baseline seed 0)
-- what it means: 
+- what it means: This results tells me that it's good for the model to train on equal variety of photos from each city, even if it means that Seoul and Tokyo got lower score.
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
