@@ -18,6 +18,8 @@ This is the recipe the starter code came with. It is the baseline on the
 leaderboard.
 """
 
+import collections
+
 import torch
 import torch.nn.functional as F
 from torchvision import transforms as T
@@ -47,9 +49,10 @@ def sample_weights(cities, paths):
     is drawn twice as often as one with weight 1. Return None to go through
     the selection in a new random order each time, every photo once per round.
     """
-    # Photos from street cameras (osv5m_) and YouTube videos (youtube_) are
-    # mostly outside: draw them twice as often as the others.
-    return [2.0 if p.split("/")[-1].startswith(("osv5m_", "youtube_")) else 1.0 for p in paths]
+    # Every city drawn equally often: each photo gets one over the number of
+    # photos of its city.
+    counts = collections.Counter(cities)
+    return [1.0 / counts[c] for c in cities]
 
 
 def make_optimizer(model):

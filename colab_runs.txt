@@ -1,2 +1,2 @@
 python src/official.py --quick
-python src/official.py --tag more_often_outside
+python src/official.py --tag balanced
