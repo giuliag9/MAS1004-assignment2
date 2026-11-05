@@ -31,7 +31,7 @@ this is what i noticed by looking at the sheets. For Busan it seems like it make
 - changed: in sample_weights, photos whose file name starts with osv5m_ or youtube_ are drawn twice as often as the others (commons_); no photo removed
 - why: For the first change I think it's good to start from what I noticed in the mistake sheets. The first element was that it was outside photos, second was photos with no closeups. I would do one change at a time. Since the model got wrong many outside photos it could be useful to train it on a set of data where the outside images are many and appear more times. I think I wouldn't delete the inside photos but it would be good to make the outside photos appear more often during the training. / yes, let's use the name of the file since doing it by checking each photo is not possible. This way it should be mostly outside pictures. So let's do it for both youtube and osv5m, twice as often for now.
 - validation: 0.4876 (before: 0.4961, baseline seed 0)
-- what it means: 
+- what it means: I think this results tells me that the outside photo are perhaps a problem. i thought that training the model on more photos of the outside would be useful but the validation was lower than the starting recipe, only Osaka had a higher validation.
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
