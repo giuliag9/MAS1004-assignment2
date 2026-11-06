@@ -46,7 +46,7 @@ this is what i noticed by looking at the sheets. For Busan it seems like it make
 - validation: 0.4933 (Track A baseline seed 0: 0.4961)
 - what it means: It's slighltly different from the track A baseline, but still somewhat similar, where Tokyo has highest score, seoul is slightly higher than the baseline, and the same is for Busan, and Osaka.
 
-## What the mistakes of balanced have in common (mistakes_balanced_seed0 sheets, compared with the baseline sheets)
+## What I notice comparing the mistakes of balanced and baseline (mistakes_balanced_seed0 and mistakes_baseline_seed0 sheets)
 For Busan the balanced mistake still have some in commons as baseline mistakes, I notice some photos of roads with cars and outside.
 
 For Osaka as well some few photos are the same, in the balanced mistakes there are a few more photos of inside, compared to the baseline mistakes. 
