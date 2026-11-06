@@ -56,6 +56,12 @@ Tokyo mistakes are also still colorful.
 
 Overall, the mistakes from balanced are not the exact same as the baseline, even if some photos are still the same. I think in general the type of photos in the mistake is sort of the same as baseline (apart from the difference in Osaka). This can be understandable since the only change in balanced is that the photos are drawn equally, but I haven’t made other changes to it, or removed photos.
 
+## 2026-11-06 balanced_zoom (Track A)
+- changed: on top of balanced, RandomResizedCrop scale from (0.35, 1.0) to (0.1, 1.0)
+- why: I think for the next change it would be good to work on balanced to maintain the improvement achieved with it and see the effects of next changes when cities are equally drawn. I think I want to try the zoom in the photos since some mistake photos in balanced are still from afar so I would still want to try since it was one of the first thing I noticed at the beginning.
+- validation: (waiting for the Colab run) (before: 0.5117, balanced)
+- what it means: 
+
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
