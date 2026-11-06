@@ -1,0 +1,38 @@
+[1/2] python src/official.py --quick
+Track A, seed 0, on cuda: all training photos (seoul 11274, busan 5191, tokyo 13347, osaka 7200, taipei 7245)
+20 steps of 64 photos = 1,280 photos through the network
+  step     2/20  loss 1.722  (6s)
+  step     4/20  loss 1.691  (6s)
+  step     6/20  loss 1.619  (7s)
+  step     8/20  loss 1.645  (8s)
+  step    10/20  loss 1.632  (9s)
+  step    12/20  loss 1.592  (10s)
+  step    14/20  loss 1.595  (11s)
+  step    16/20  loss 1.662  (12s)
+  step    18/20  loss 1.637  (13s)
+  step    20/20  loss 1.554  (14s)
+
+validation score 0.224  (seoul 0.024, busan 0.217, tokyo 0.292, osaka 0.400, taipei 0.184)
+training took 0.2 min; wrote /content/drive/MyDrive/mas1004/assignment2/results/run_seed0/model.onnx
+This was not an official run (--quick or a different --budget). The grader's numbers will differ.
+A full run on this computer (cuda) would take about 49 minutes: 46 for training and 3 for the validation photos.
+
+[2/2] python src/official.py --tag balanced_zoom
+Track A, seed 0, on cuda: all training photos (seoul 11274, busan 5191, tokyo 13347, osaka 7200, taipei 7245)
+3906 steps of 64 photos = 249,984 photos through the network
+  step   390/3906  loss 1.472  (219s)
+  step   780/3906  loss 1.338  (434s)
+  step  1170/3906  loss 1.249  (648s)
+  step  1560/3906  loss 1.189  (859s)
+  step  1950/3906  loss 1.139  (1069s)
+  step  2340/3906  loss 1.081  (1274s)
+  step  2730/3906  loss 1.022  (1484s)
+  step  3120/3906  loss 0.977  (1688s)
+  step  3510/3906  loss 0.944  (1892s)
+  step  3900/3906  loss 0.924  (2094s)
+  step  3906/3906  loss 0.926  (2096s)
+
+validation score 0.509  (seoul 0.472, busan 0.476, tokyo 0.512, osaka 0.449, taipei 0.635)
+training took 34.9 min; wrote /content/drive/MyDrive/mas1004/assignment2/results/balanced_zoom_seed0/model.onnx
+
+All queued runs are done.

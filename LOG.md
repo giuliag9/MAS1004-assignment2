@@ -59,7 +59,7 @@ Overall, the mistakes from balanced are not the exact same as the baseline, even
 ## 2026-11-06 balanced_zoom (Track A)
 - changed: on top of balanced, RandomResizedCrop scale from (0.35, 1.0) to (0.1, 1.0)
 - why: I think for the next change it would be good to work on balanced to maintain the improvement achieved with it and see the effects of next changes when cities are equally drawn. I think I want to try the zoom in the photos since some mistake photos in balanced are still from afar so I would still want to try since it was one of the first thing I noticed at the beginning.
-- validation: (waiting for the Colab run) (before: 0.5117, balanced)
+- validation: 0.509 (before: 0.5117, balanced)
 - what it means: 
 
 ## Leaderboard
