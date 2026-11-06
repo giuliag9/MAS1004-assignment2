@@ -65,7 +65,7 @@ Overall, the mistakes from balanced are not the exact same as the baseline, even
 ## 2026-11-06 balanced_brightness (Track A)
 - changed: back to balanced (balanced_zoom undone), then ColorJitter brightness from 0.2 to 0.5 (each training photo made between 0.5 and 1.5 times as bright); contrast and saturation stay 0.2
 - why: for the next change I would start from balanced again, in order to check the change without zoom. I think at this point I should address another element I noticed in the mistake sheets, which is that some photos in the mistake are darker. So it could be interesting to make some photos lighter for the training, perhaps by making the light vary like for the zoom / let's use both, darker and lighter 0.5, - 1.5 , since in the mistakes for some cities the photos were darker, while in other not.
-- validation: 0.506 (before: 0.5117, balanced)
+- validation: 0.5064 (before: 0.5117, balanced)
 - what it means: 
 
 ## Leaderboard
