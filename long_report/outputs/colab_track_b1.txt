@@ -1,0 +1,16 @@
+[1/2] python src/train_b.py --tag track_b1 --submit
+44257 photos (seoul 11274, busan 5191, tokyo 13347, osaka 7200, taipei 7245) on cuda
+epoch 1/4: loss 1.371 (443s)
+epoch 2/4: loss 1.166 (875s)
+epoch 3/4: loss 1.018 (1299s)
+epoch 4/4: loss 0.887 (1724s)
+validation score 0.493 (seoul 0.593, busan 0.383, tokyo 0.613, osaka 0.365, taipei 0.512)
+wrote /content/drive/MyDrive/mas1004/assignment2/results/track_b1/model.onnx: 11.17 million parameters, 1.81 billion multiply-adds
+copied to submission/. Check it with: python src/check_submission.py
+
+[2/2] python src/check_submission.py --no-val
+/content/drive/MyDrive/mas1004/assignment2/submission/model.onnx: 44.7 MB, 11.17 million parameters, 1.81 billion multiply-adds per 224 x 224 photo
+  limits: 12 million parameters, 2.0 billion multiply-adds
+  format and limits: OK
+
+All queued runs are done.

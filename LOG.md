@@ -40,6 +40,12 @@ this is what i noticed by looking at the sheets. For Busan it seems like it make
 - what it means: This results tells me that it's good for the model to train on equal variety of photos from each city, even if it means that Seoul and Tokyo got lower score.
   (what I mean by equal variety is that the photos of the cities are drawn equally so  the model trains on a variety of photos that is equal between the 5 cities)
 
+## 2026-11-06 track_b1 (Track B)
+- changed: nothing, train_b.py as it is (ResNet18 at 224, 4 epochs, starter training photos)
+- why: 
+- validation: 0.493 (Track A baseline seed 0: 0.4961)
+- what it means: 
+
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
