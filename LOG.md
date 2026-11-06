@@ -43,7 +43,7 @@ this is what i noticed by looking at the sheets. For Busan it seems like it make
 ## 2026-11-06 track_b1 (Track B)
 - changed: nothing, train_b.py as it is (ResNet18 at 224, 4 epochs, starter training photos)
 - why: 
-- validation: 0.493 (Track A baseline seed 0: 0.4961)
+- validation: 0.4933 (Track A baseline seed 0: 0.4961)
 - what it means: 
 
 ## Leaderboard
