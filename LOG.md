@@ -46,6 +46,16 @@ this is what i noticed by looking at the sheets. For Busan it seems like it make
 - validation: 0.4933 (Track A baseline seed 0: 0.4961)
 - what it means: It's slighltly different from the track A baseline, but still somewhat similar, where Tokyo has highest score, seoul is slightly higher than the baseline, and the same is for Busan, and Osaka.
 
+## What the mistakes of balanced have in common (mistakes_balanced_seed0 sheets, compared with the baseline sheets)
+For Busan the balanced mistake still have some in commons as baseline mistakes, I notice some photos of roads with cars and outside.
+
+For Osaka as well some few photos are the same, in the balanced mistakes there are a few more photos of inside, compared to the baseline mistakes. 
+For Seoul it maintains some photos of vehicles, and food. 
+For Taipei as well, some mistake changed. Less nature but still some outside photos
+Tokyo mistakes are also still colorful.
+
+Overall, the mistakes from balanced are not the exact same as the baseline, even if some photos are still the same. I think in general the type of photos in the mistake is sort of the same as baseline (apart from the difference in Osaka). This can be understandable since the only change in balanced is that the photos are drawn equally, but I haven’t made other changes to it, or removed photos.
+
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
