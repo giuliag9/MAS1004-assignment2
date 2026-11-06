@@ -1,2 +1,2 @@
 python src/official.py --quick
-python src/official.py --tag balanced_zoom
+python src/official.py --tag balanced_brightness
