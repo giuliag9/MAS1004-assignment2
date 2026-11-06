@@ -60,7 +60,7 @@ Overall, the mistakes from balanced are not the exact same as the baseline, even
 - changed: on top of balanced, RandomResizedCrop scale from (0.35, 1.0) to (0.1, 1.0)
 - why: I think for the next change it would be good to work on balanced to maintain the improvement achieved with it and see the effects of next changes when cities are equally drawn. I think I want to try the zoom in the photos since some mistake photos in balanced are still from afar so I would still want to try since it was one of the first thing I noticed at the beginning.
 - validation: 0.5089 (before: 0.5117, balanced)
-- what it means: 
+- what it means: The results tell me that adding the zoom to the balanced didn't improve the model overall, although there are some improvements for Busan and Taipei, but Seoul and Tokyo went down a bit. So the zoom was useful for some city but not for others, meaning it's not an overall change that works for all the cities. It could be kept into consideration to combine in a second moment with other changes.
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
