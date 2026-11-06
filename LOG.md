@@ -66,7 +66,7 @@ Overall, the mistakes from balanced are not the exact same as the baseline, even
 - changed: back to balanced (balanced_zoom undone), then ColorJitter brightness from 0.2 to 0.5 (each training photo made between 0.5 and 1.5 times as bright); contrast and saturation stay 0.2
 - why: for the next change I would start from balanced again, in order to check the change without zoom. I think at this point I should address another element I noticed in the mistake sheets, which is that some photos in the mistake are darker. So it could be interesting to make some photos lighter for the training, perhaps by making the light vary like for the zoom / let's use both, darker and lighter 0.5, - 1.5 , since in the mistakes for some cities the photos were darker, while in other not.
 - validation: 0.5064 (before: 0.5117, balanced)
-- what it means: 
+- what it means: this results tell me that change in brightness were less useful than zoom, but it still was slighly good for Busan Osaka and Taipei. For Osaka it was more effective than zoom. It shows a differnet situation for Seoul and Tokyo, which makes me think I should consider these two city in similar way since both went down and up together with changes.
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
