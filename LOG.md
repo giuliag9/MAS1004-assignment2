@@ -42,6 +42,8 @@ this is what i noticed by looking at the sheets. For Busan it seems like it make
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
+  - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
 - track-a-2 "balanced" (released 5 November): leaderboard score 0.410 (0.402–0.419), grader's validation 0.502
+  - leaderboard per city: Seoul 0.57	Busan 0.26	Tokyo 0.61	Osaka 0.33	Taipei 0.28
 - why validation and leaderboard differ (first thought): it is different because the images are different, not the ones on which the starter recipe trained on
 - why validation and leaderboard differ (after talking about it): the reason why the valiadation on leader board is different might be because the images are not similar to the one in validation
