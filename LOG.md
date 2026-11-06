@@ -42,9 +42,9 @@ this is what i noticed by looking at the sheets. For Busan it seems like it make
 
 ## 2026-11-06 track_b1 (Track B)
 - changed: nothing, train_b.py as it is (ResNet18 at 224, 4 epochs, starter training photos)
-- why: 
+- why: this run is the requested from step 8, train track b as it is.
 - validation: 0.4933 (Track A baseline seed 0: 0.4961)
-- what it means: 
+- what it means: It's slighltly different from the track A baseline, but still somewhat similar, where Tokyo has highest score, seoul is slightly higher than the baseline, and the same is for Busan, and Osaka.
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
