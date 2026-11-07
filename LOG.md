@@ -114,6 +114,7 @@ Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects_bal
 
 ## What I notice on the mistakes of balanced_zoom_small_lr (mistakes_balanced_zoom_small_lr_seed0 sheets)
 it does look like many mistake photos are outside photo, as well as some photo being darker
+osaka has quite a few photo that have darker light, for outside photos. Tokyo has some outside photo and some are darker
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
