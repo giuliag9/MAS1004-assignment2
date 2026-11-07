@@ -1,2 +1,1 @@
-python src/official.py --quick
-python src/official.py --tag balanced_zoom_small_lr
+python src/curate.py mistakes results/balanced_zoom_small_lr_seed0/model.onnx --every 2
