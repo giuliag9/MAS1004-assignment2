@@ -1,2 +1,2 @@
 python src/official.py --quick
-python src/official.py --tag balanced_smaller_lr
+python src/official.py --tag balanced_zoom_small_lr
