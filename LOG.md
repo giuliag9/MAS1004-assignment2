@@ -102,7 +102,7 @@ Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects_bal
 ## 2026-11-07 balanced_smaller_lr (Track A)
 - changed: on top of balanced (all training photos again), peak learning rate from 3e-4 to 2e-4 (lr in make_optimizer and max_lr in make_scheduler); schedule, warm-up and weight decay unchanged
 - why: I think I want to try to change the learning rate on balanced. I remember from assignment 1 that a larger learning rate was not necessarily better so in this case I would make it a bit smaller. / I wouldn't go too much lower so 2e-4 for now
-- validation: 0.506 (before: 0.5117, balanced)
+- validation: 0.5065 (before: 0.5117, balanced)
 - what it means: 
 
 ## Leaderboard
