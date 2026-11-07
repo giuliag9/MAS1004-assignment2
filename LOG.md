@@ -73,5 +73,7 @@ Overall, the mistakes from balanced are not the exact same as the baseline, even
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
 - track-a-2 "balanced" (released 5 November): leaderboard score 0.410 (0.402–0.419), grader's validation 0.502
   - leaderboard per city: Seoul 0.57	Busan 0.26	Tokyo 0.61	Osaka 0.33	Taipei 0.28
+- track-b-1 "Track_B_1" (released 6 November): leaderboard score 0.389, Track_B_1 1.81 GMACs @ 224
+  - leaderboard per city: seoul 0.60	busan 0.16	tokyo 0.68	osaka 0.23	taipei 0.28
 - why validation and leaderboard differ (first thought): it is different because the images are different, not the ones on which the starter recipe trained on
 - why validation and leaderboard differ (after talking about it): the reason why the valiadation on leader board is different might be because the images are not similar to the one in validation
