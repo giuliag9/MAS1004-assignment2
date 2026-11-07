@@ -1,0 +1,63 @@
+[1/8] python src/curate.py drop suspects_balanced_seed0_busan_00 3 16 17 20 26 28 30 32 34 44 48 --reason "closeup or focus on one thing"
+dropped 11 photos (closeup or focus on one thing); the selection now has 44246
+
+[2/8] python src/curate.py drop suspects_balanced_seed0_osaka_00 5 6 9 10 11 16 20 34 36 48 --reason "closeup or focus on one thing"
+dropped 10 photos (closeup or focus on one thing); the selection now has 44236
+
+[3/8] python src/curate.py drop suspects_balanced_seed0_seoul_00 1 3 4 7 8 18 20 22 23 26 30 33 41 43 --reason "closeup or focus on one thing"
+dropped 14 photos (closeup or focus on one thing); the selection now has 44222
+
+[4/8] python src/curate.py drop suspects_balanced_seed0_taipei_00 4 5 12 15 17 26 30 31 33 36 42 --reason "closeup or focus on one thing"
+dropped 11 photos (closeup or focus on one thing); the selection now has 44211
+
+[5/8] python src/curate.py drop suspects_balanced_seed0_tokyo_00 6 9 10 14 17 18 22 23 25 31 36 39 41 42 43 --reason "closeup or focus on one thing"
+dropped 15 photos (closeup or focus on one thing); the selection now has 44196
+
+[6/8] python src/curate.py count
+city      selected     of   by source
+seoul        11260  11274   commons 6756, osv5m 320, youtube 4184
+busan         5180   5191   commons 3476, youtube 1704
+tokyo        13332  13347   commons 6960, osv5m 1916, youtube 4456
+osaka         7190   7200   commons 5338, osv5m 341, youtube 1511
+taipei        7234   7245   commons 5657, osv5m 533, youtube 1044
+total 44196 rows
+dropped: 61 closeup or focus on one thing
+
+[7/8] python src/official.py --quick
+Track A, seed 0, on cuda: selection.csv, 44196 rows (seoul 11260, busan 5180, tokyo 13332, osaka 7190, taipei 7234)
+20 steps of 64 photos = 1,280 photos through the network
+  step     2/20  loss 1.704  (5s)
+  step     4/20  loss 1.673  (5s)
+  step     6/20  loss 1.623  (7s)
+  step     8/20  loss 1.644  (8s)
+  step    10/20  loss 1.574  (10s)
+  step    12/20  loss 1.641  (12s)
+  step    14/20  loss 1.584  (13s)
+  step    16/20  loss 1.580  (14s)
+  step    18/20  loss 1.572  (16s)
+  step    20/20  loss 1.549  (16s)
+
+validation score 0.286  (seoul 0.146, busan 0.304, tokyo 0.354, osaka 0.286, taipei 0.342)
+training took 0.3 min; wrote /content/drive/MyDrive/mas1004/assignment2/results/run_seed0/model.onnx
+This was not an official run (--quick or a different --budget). The grader's numbers will differ.
+A full run on this computer (cuda) would take about 56 minutes: 53 for training and 3 for the validation photos.
+
+[8/8] python src/official.py --tag balanced_rule_drop
+Track A, seed 0, on cuda: selection.csv, 44196 rows (seoul 11260, busan 5180, tokyo 13332, osaka 7190, taipei 7234)
+3906 steps of 64 photos = 249,984 photos through the network
+  step   390/3906  loss 1.431  (254s)
+  step   780/3906  loss 1.264  (497s)
+  step  1170/3906  loss 1.155  (738s)
+  step  1560/3906  loss 1.081  (974s)
+  step  1950/3906  loss 1.029  (1209s)
+  step  2340/3906  loss 0.949  (1449s)
+  step  2730/3906  loss 0.882  (1690s)
+  step  3120/3906  loss 0.826  (1928s)
+  step  3510/3906  loss 0.786  (2173s)
+  step  3900/3906  loss 0.763  (2415s)
+  step  3906/3906  loss 0.762  (2417s)
+
+validation score 0.495  (seoul 0.503, busan 0.430, tokyo 0.526, osaka 0.427, taipei 0.590)
+training took 40.3 min; wrote /content/drive/MyDrive/mas1004/assignment2/results/balanced_rule_drop_seed0/model.onnx
+
+All queued runs are done.

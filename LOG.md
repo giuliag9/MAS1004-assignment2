@@ -95,7 +95,7 @@ Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects_bal
 ## 2026-11-07 balanced_rule_drop (Track A)
 - changed: recipe back to balanced (balanced_brightness undone); 61 training photos dropped by my Step 7 rule (busan 11, osaka 10, seoul 14, taipei 11, tokyo 15), reason "closeup or focus on one thing"
 - why: my Step 7 rule above
-- validation: (waiting for the Colab run) (before: 0.5117, balanced)
+- validation: 0.495 (before: 0.5117, balanced)
 - what it means: 
 
 ## Leaderboard
