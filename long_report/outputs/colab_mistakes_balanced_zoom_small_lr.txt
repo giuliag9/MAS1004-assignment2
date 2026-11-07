@@ -1,0 +1,6 @@
+python src/curate.py mistakes results/balanced_zoom_small_lr_seed0/model.onnx --every 2
+seoul: 636 of 1218 wrong; the 48 most confident on mistakes_balanced_zoom_small_lr_seed0_seoul_00
+busan: 347 of 695 wrong; the 48 most confident on mistakes_balanced_zoom_small_lr_seed0_busan_00
+tokyo: 941 of 1940 wrong; the 48 most confident on mistakes_balanced_zoom_small_lr_seed0_tokyo_00
+osaka: 604 of 1064 wrong; the 48 most confident on mistakes_balanced_zoom_small_lr_seed0_osaka_00
+taipei: 407 of 1122 wrong; the 48 most confident on mistakes_balanced_zoom_small_lr_seed0_taipei_00
