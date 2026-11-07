@@ -68,6 +68,17 @@ Overall, the mistakes from balanced are not the exact same as the baseline, even
 - validation: 0.5064 (before: 0.5117, balanced)
 - what it means: this results tell me that change in brightness were less useful than zoom, but it still was slighly good for Busan Osaka and Taipei. For Osaka it was more effective than zoom. It shows a differnet situation for Seoul and Tokyo, which makes me think I should consider these two city in similar way since both went down and up together with changes.
 
+## Step 7: what I see on the suspects of balanced (suspects_balanced_seed0 sheets)
+Suspect balanced Busan: I notice photos that are closeup or focus on object or things such as food, vase, flowers, books and vehicles. 
+
+Suspect balanced Osaka: similarly photos closeup or focus of animal, food
+
+Suspect balanced Seoul: closeups on objects, food. but also outside buildings and people 
+
+Suspect balanced Taipei: here similarly photos of objects, animal, food, 
+
+Suspect balanced Tokyo: I notice photos of food, cars, people
+
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
