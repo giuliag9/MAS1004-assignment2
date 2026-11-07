@@ -103,7 +103,7 @@ Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects_bal
 - changed: on top of balanced (all training photos again), peak learning rate from 3e-4 to 2e-4 (lr in make_optimizer and max_lr in make_scheduler); schedule, warm-up and weight decay unchanged
 - why: I think I want to try to change the learning rate on balanced. I remember from assignment 1 that a larger learning rate was not necessarily better so in this case I would make it a bit smaller. / I wouldn't go too much lower so 2e-4 for now
 - validation: 0.5065 (before: 0.5117, balanced)
-- what it means: 
+- what it means: the results of this training are lower than the balanced one, it was good for Seoul but not for Taipei. It seems like the changes I made after balanced, were less effective or were only effective for some cities but not for the overall validation.
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
