@@ -112,6 +112,9 @@ Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects_bal
 - what it means: combining zoom and smaller lr was useful, especially for Busan and Taipei. I expected Seoul to have a higher score since with the learning rate it increased. I also thought tokyo would stay around the scores of zoom and small lr, but didn't, meaning I still have to find what makes Tokyo score go up.
 - released as track-a-3 "balanced zoom+lr" (7 November)
 
+## What I notice on the mistakes of balanced_zoom_small_lr (mistakes_balanced_zoom_small_lr_seed0 sheets)
+it does look like many mistake photos are outside photo, as well as some photo being darker
+
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
