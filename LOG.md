@@ -79,6 +79,8 @@ Suspect balanced Taipei: here similarly photos of objects, animal, food,
 
 Suspect balanced Tokyo: I notice photos of food, cars, people
 
+My rule (written before dropping): I think overall I notice that there als also many outside photos, but I also think that ouside photos usually have a lot of elements into them that can be useful for the model, so I wouldn't drop them. I think finding one specific only rule is not easy as the images a various, so I think the rule I want to make follows what I noticed, meaning photos that are closeups/focus on only one object or thing, that doesn't give much other element in the photo.
+
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
