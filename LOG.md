@@ -99,6 +99,12 @@ Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects_bal
 - what it means: the validation on this training was lower than the normal balanced so it makes me think that perhaps what I decided to drop and my rule was not the best choice.
 - afterwards: the 61 photos were put back (selection.csv removed, so training uses all training photos again); track_a/dropped.csv stays as the record of what was dropped and why
 
+## 2026-11-07 balanced_smaller_lr (Track A)
+- changed: on top of balanced (all training photos again), peak learning rate from 3e-4 to 2e-4 (lr in make_optimizer and max_lr in make_scheduler); schedule, warm-up and weight decay unchanged
+- why: I think I want to try to change the learning rate on balanced. I remember from assignment 1 that a larger learning rate was not necessarily better so in this case I would make it a bit smaller. / I wouldn't go too much lower so 2e-4 for now
+- validation: (waiting for the Colab run) (before: 0.5117, balanced)
+- what it means: 
+
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
