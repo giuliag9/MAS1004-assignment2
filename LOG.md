@@ -109,7 +109,8 @@ Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects_bal
 - changed: balanced with two earlier changes combined: RandomResizedCrop scale (0.1, 1.0) as in balanced_zoom, and peak learning rate 2e-4 as in balanced_smaller_lr; nothing else
 - why: At this point I think it could be interesting to try and combine previous changes since after balanced, the other changes were positive for some cities and negative for others. Perhaps combining the change in zoom (which previously was positive for Busan and Taipei especially) with smaller lr (positive for seoul), could create an overall better validation than balanced by itself. The risk is that the two changes cancel each other and the validation ends up still lower, but in that case it would tell me that it's not the best way to combine.
 - validation: 0.5138 (before: 0.5117, balanced)
-- what it means: 
+- what it means: combining zoom and smaller lr was useful, especially for Busan and Taipei. I expected Seoul to have a higher score since with the learning rate it increased. I also thought tokyo would stay around the scores of zoom and small lr, but didn't, meaning I still have to find what makes Tokyo score go up.
+- released as track-a-3 "balanced zoom+lr" (7 November)
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
