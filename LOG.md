@@ -81,6 +81,17 @@ Suspect balanced Tokyo: I notice photos of food, cars, people
 
 My rule (written before dropping): I think overall I notice that there als also many outside photos, but I also think that ouside photos usually have a lot of elements into them that can be useful for the model, so I wouldn't drop them. I think finding one specific only rule is not easy as the images a various, so I think the rule I want to make follows what I noticed, meaning photos that are closeups/focus on only one object or thing, that doesn't give much other element in the photo.
 
+My requests to the agent (Step 7, word for word):
+Drop 3, 16, 17, 20, 26, 28, 30, 32, 34, 44, 48, from suspects_balanced_seed0_busan_00.png because “closeup or focus on one thing” 
+
+Drop 5, 6, 9, 10, 11, 16, 20, 34, 36, 48 from suspects_balanced_seed0_osaka_00.png  because “closeup or focus on one thing” 
+
+Drop 1, 3,4, 7, 8, 18, 20, 22, 23, 26, 30, 33, 41, 43, from suspects_balanced_seed0_seoul_00.png because “closeup or focus on one thing” 
+
+Drop 4, 5, 12, 15, 17, 26, 30, 31, 33, 36, 42, from suspects_balanced_seed0_taipei_00.png because “closeup or focus on one thing” 
+
+Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects_balanced_seed0_tokyo_00.png because “closeup or focus on one thing”
+
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
