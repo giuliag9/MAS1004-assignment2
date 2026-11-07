@@ -97,6 +97,7 @@ Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects_bal
 - why: my Step 7 rule above
 - validation: 0.4952 (before: 0.5117, balanced)
 - what it means: the validation on this training was lower than the normal balanced so it makes me think that perhaps what I decided to drop and my rule was not the best choice.
+- afterwards: the 61 photos were put back (selection.csv removed, so training uses all training photos again); track_a/dropped.csv stays as the record of what was dropped and why
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
