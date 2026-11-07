@@ -96,7 +96,7 @@ Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects_bal
 - changed: recipe back to balanced (balanced_brightness undone); 61 training photos dropped by my Step 7 rule (busan 11, osaka 10, seoul 14, taipei 11, tokyo 15), reason "closeup or focus on one thing"
 - why: my Step 7 rule above
 - validation: 0.4952 (before: 0.5117, balanced)
-- what it means: 
+- what it means: the validation on this training was lower than the normal balanced so it makes me think that perhaps what I decided to drop and my rule was not the best choice.
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
