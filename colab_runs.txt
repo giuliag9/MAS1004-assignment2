@@ -1,1 +1,2 @@
-python src/curate.py mistakes results/balanced_zoom_small_lr_seed0/model.onnx --every 2
+python src/train_b.py --tag track_b2_balanced --balance --submit
+python src/check_submission.py --no-val
