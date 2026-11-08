@@ -49,10 +49,17 @@ def sample_weights(cities, paths):
     is drawn twice as often as one with weight 1. Return None to go through
     the selection in a new random order each time, every photo once per round.
     """
-    # Every city drawn equally often: each photo gets one over the number of
-    # photos of its city.
-    counts = collections.Counter(cities)
-    return [1.0 / counts[c] for c in cities]
+    # Every city drawn equally often. Within Tokyo, photos from street cameras
+    # (osv5m_) and YouTube videos (youtube_), which are mostly outside, are drawn
+    # twice as often as the others; Tokyo's share stays the same as every city's.
+    def factor(city, path):
+        outside = path.split("/")[-1].startswith(("osv5m_", "youtube_"))
+        return 2.0 if city == "tokyo" and outside else 1.0
+
+    totals = collections.defaultdict(float)
+    for c, p in zip(cities, paths):
+        totals[c] += factor(c, p)
+    return [factor(c, p) / totals[c] for c, p in zip(cities, paths)]
 
 
 def make_optimizer(model):

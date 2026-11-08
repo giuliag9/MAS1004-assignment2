@@ -1,2 +1,4 @@
 python src/train_b.py --tag track_b_balanced --balance --submit
 python src/check_submission.py --no-val
+python src/official.py --quick
+python src/official.py --tag balanced_zoom_lr_outside_tokyo
