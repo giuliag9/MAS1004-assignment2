@@ -121,6 +121,8 @@ osaka has quite a few photo that have darker light, for outside photos. Tokyo ha
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
 - track-a-2 "balanced" (released 5 November): leaderboard score 0.410 (0.402–0.419), grader's validation 0.502
   - leaderboard per city: Seoul 0.57	Busan 0.26	Tokyo 0.61	Osaka 0.33	Taipei 0.28
+- track-a-3 "balanced zoom+lr" (released 7 November): leaderboard score 0.403 (0.397–0.414), grader's validation 0.509
+  - leaderboard per city: seoul 0.55	busan 0.28	tokyo 0.61	osaka 0.30	taipei 0.28
 - track-b-1 "Track_B_1" (released 6 November): leaderboard score 0.389, Track_B_1 1.81 GMACs @ 224
   - leaderboard per city: seoul 0.60	busan 0.16	tokyo 0.68	osaka 0.23	taipei 0.28
 - why validation and leaderboard differ (first thought): it is different because the images are different, not the ones on which the starter recipe trained on
