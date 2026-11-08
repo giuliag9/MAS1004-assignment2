@@ -119,13 +119,13 @@ osaka has quite a few photo that have darker light, for outside photos. Tokyo ha
 ## 2026-11-08 track_b_balanced (Track B)
 - changed: train_b.py with --balance (every city drawn equally often); everything else as track_b1 (ResNet18 at 224, 4 epochs, starter training photos)
 - why: I want the first change for track B to follow what worked for track A, meaning balance, so that each city photos are drawn equally. The reason is that as a first step I think it's good to go with what worked in the other track as well, before trying other changes.
-- validation: 0.498 (before: 0.4933, track_b1)
+- validation: 0.4976 (before: 0.4933, track_b1)
 - what it means: 
 
 ## 2026-11-08 balanced_zoom_lr_outside_tokyo (Track A)
 - changed: on top of balanced_zoom_small_lr, within Tokyo only, photos whose file name starts with osv5m_ or youtube_ are drawn twice as often as Tokyo's other photos; every city still gets the same share
 - why: I'm thinking of making the more often outside for tokyo (since in that change previously tokyo was higher than in balanced) / Then, I want to try only more outside for tokyo, since I'm more interested now to see how the more outside work on the balanced. / use the same twice as often for the outside for tokyo
-- validation: 0.510 (before: 0.5138, balanced_zoom_small_lr)
+- validation: 0.5101 (before: 0.5138, balanced_zoom_small_lr)
 - what it means: 
 
 ## Leaderboard
