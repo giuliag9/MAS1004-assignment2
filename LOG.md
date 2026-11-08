@@ -126,7 +126,7 @@ osaka has quite a few photo that have darker light, for outside photos. Tokyo ha
 - changed: on top of balanced_zoom_small_lr, within Tokyo only, photos whose file name starts with osv5m_ or youtube_ are drawn twice as often as Tokyo's other photos; every city still gets the same share
 - why: I'm thinking of making the more often outside for tokyo (since in that change previously tokyo was higher than in balanced) / Then, I want to try only more outside for tokyo, since I'm more interested now to see how the more outside work on the balanced. / use the same twice as often for the outside for tokyo
 - validation: 0.5101 (before: 0.5138, balanced_zoom_small_lr)
-- what it means: 
+- what it means: The change in showing more outside for tokyo didn't work the same as when it was applied to the baseline, meaning that balanced made a difference, and I still need to find what on balanced makes Tokyo go up.
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
