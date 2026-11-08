@@ -121,6 +121,7 @@ osaka has quite a few photo that have darker light, for outside photos. Tokyo ha
 - why: I want the first change for track B to follow what worked for track A, meaning balance, so that each city photos are drawn equally. The reason is that as a first step I think it's good to go with what worked in the other track as well, before trying other changes.
 - validation: 0.4976 (before: 0.4933, track_b1)
 - what it means: the results show that as for track A balanced improved the model, especially for Busan Osaka and Taipei.
+- released as track-b-2 "Track B balanced" (8 November)
 
 ## 2026-11-08 balanced_zoom_lr_outside_tokyo (Track A)
 - changed: on top of balanced_zoom_small_lr, within Tokyo only, photos whose file name starts with osv5m_ or youtube_ are drawn twice as often as Tokyo's other photos; every city still gets the same share
