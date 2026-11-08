@@ -87,8 +87,25 @@ The leaderboard score is the mean of the three models the grader trains (seeds 0
 
 \picturefile{figures/suspects_balanced_seed0_tokyo_00.png}
 
-\fillin{What you looked at, what you saw in common, and the rule you wrote
-before acting. (Your notes and your rule are in the lab notebook, under Step 7.)}
+I looked at the suspects sheets of balanced (\texttt{suspects\_balanced\_seed0\_<city>\_00}): for each city, the 48 training photos, out of every fourth one, that the balanced model gave the lowest probability for their own city.
+
+What I saw, from my lab notebook:
+\begin{quote}\small
+Suspect balanced Busan: I notice photos that are closeup or focus on object or things such as food, vase, flowers, books and vehicles.
+
+Suspect balanced Osaka: similarly photos closeup or focus of animal, food
+
+Suspect balanced Seoul: closeups on objects, food. but also outside buildings and people
+
+Suspect balanced Taipei: here similarly photos of objects, animal, food,
+
+Suspect balanced Tokyo: I notice photos of food, cars, people
+\end{quote}
+
+The rule I wrote before dropping any photo, from my lab notebook:
+\begin{quote}\small
+I think overall I notice that there als also many outside photos, but I also think that ouside photos usually have a lot of elements into them that can be useful for the model, so I wouldn't drop them. I think finding one specific only rule is not easy as the images a various, so I think the rule I want to make follows what I noticed, meaning photos that are closeups/focus on only one object or thing, that doesn't give much other element in the photo.
+\end{quote}
 
 After dropping the 61 photos, \texttt{curate.py count} printed:
 \outputfile{outputs/curate_count.txt}
