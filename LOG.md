@@ -116,7 +116,7 @@ Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects_bal
 it does look like many mistake photos are outside photo, as well as some photo being darker
 osaka has quite a few photo that have darker light, for outside photos. Tokyo has some outside photo and some are darker
 
-## 2026-11-08 track_b2_balanced (Track B)
+## 2026-11-08 track_b_balanced (Track B)
 - changed: train_b.py with --balance (every city drawn equally often); everything else as track_b1 (ResNet18 at 224, 4 epochs, starter training photos)
 - why: I want the first change for track B to follow what worked for track A, meaning balance, so that each city photos are drawn equally. The reason is that as a first step I think it's good to go with what worked in the other track as well, before trying other changes.
 - validation: (waiting for the Colab run) (before: 0.4933, track_b1)
