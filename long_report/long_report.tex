@@ -135,8 +135,8 @@ My requests to the agent for these decisions, word for word:
 tag & what changed & validation & seoul & busan & tokyo & osaka & taipei \\
 \midrule
 track\_b1 & nothing, train\_b.py as it is (ResNet18 at 224, 4 epochs, starter training photos) & 0.4933 & 0.593 & 0.3835 & 0.6127 & 0.3651 & 0.5123 \\
-track\_b\_balanced & train\_b.py with --balance (every city drawn equally often); everything else as track\_b1 (ResNet18 at 224, 4 epochs, starter training photos) & 0.4976 & 0.5314 & 0.4403 & 0.4878 & 0.4521 & 0.5765 \\
-track\_b\_balanced\_smaller\_lr & on top of track\_b\_balanced, peak learning rate from 3e-4 to 1.5e-4 (--lr 1.5e-4); everything else the same (ResNet18 at 224, 4 epochs, --balance) & 0.4955 & 0.5047 & 0.4489 & 0.5133 & 0.4445 & 0.5662 \\
+track\_b\_balanced & train\_b.py with -{}-balance (every city drawn equally often); everything else as track\_b1 (ResNet18 at 224, 4 epochs, starter training photos) & 0.4976 & 0.5314 & 0.4403 & 0.4878 & 0.4521 & 0.5765 \\
+track\_b\_balanced\_smaller\_lr & on top of track\_b\_balanced, peak learning rate from 3e-4 to 1.5e-4 (-{}-lr 1.5e-4); everything else the same (ResNet18 at 224, 4 epochs, -{}-balance) & 0.4955 & 0.5047 & 0.4489 & 0.5133 & 0.4445 & 0.5662 \\
 \bottomrule
 \end{tabular}
 \end{center}
