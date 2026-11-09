@@ -135,6 +135,12 @@ osaka has quite a few photo that have darker light, for outside photos. Tokyo ha
 - validation: 0.4955 (before: 0.4976, track_b_balanced); the first Colab run on 8 November stopped when the free GPU time ran out, this is the second, on 9 November
 - what it means: Compared to track A, a smaller learning rate (in this case half) for track B didn't bring the validation down significantly, which leaves open whether using a smaller learning rate, like in track A, gives a different result, and could be useful for the model.
 
+## 2026-11-09 track_b_balanced_epochs (Track B)
+- changed: on top of track_b_balanced, 6 epochs instead of 4 (--epochs 6); everything else the same (ResNet18 at 224, learning rate 3e-4, --balance)
+- why: for track B I want to try something different that I didn't try with track A, meaning having more epochs. It could be useful for the model, but as for the learning rate I wouldn't increase them too much. / I want to try with 6 epoch for track b, applied on track_b_balanced
+- validation: (waiting for the Colab run) (before: 0.4976, track_b_balanced)
+- what it means: 
+
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
