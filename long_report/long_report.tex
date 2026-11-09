@@ -181,8 +181,11 @@ Overall the leaderboard score was always lower than my validation. Since the pho
 % ---------------------------------------------------------------------------
 \section*{What made the difference}
 
-\fillin{Which change helped most and which least, in both tracks, with your
-numbers.}
+\subsection*{Track A}
+For track A the change that helped the most is balanced, the change that made all cities being drawn equally. Compared to the baseline seed 0 which gave 0.4961 as validation, balanced reached 0.5117, and was even higher than my first change more\_often\_outside that gave a lower validation than baseline 0.4876. In particualr balanced helped mainly Busan, Osaka and Taipei, while Seoul and Tokyo went down. After that change, the other changes I tried struggled to improve the model, until balanced\_zoom\_small\_lr which was applied on balanced and added two changes together (that I previously tried), but the improvement was less significant, only reaching a validation of 0.5138. As for the change that helped the least, it was balanced\_rule\_drop which was applied on balanced and only gave a validation of 0.4952. In that case, perhaps the rule I chose was not the best choice.
+
+\subsection*{Track B}
+\fillin{Which Track B change helped most and least, with your numbers.}
 
 \fillin{What you would do next with one more week.}
 
