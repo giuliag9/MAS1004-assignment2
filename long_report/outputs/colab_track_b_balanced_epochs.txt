@@ -1,0 +1,18 @@
+[1/2] python src/train_b.py --tag track_b_balanced_epochs --balance --epochs 6 --submit
+44257 photos (seoul 11274, busan 5191, tokyo 13347, osaka 7200, taipei 7245) on cuda
+epoch 1/6: loss 1.378 (422s)
+epoch 2/6: loss 1.152 (831s)
+epoch 3/6: loss 1.028 (1232s)
+epoch 4/6: loss 0.915 (1627s)
+epoch 5/6: loss 0.811 (2016s)
+epoch 6/6: loss 0.757 (2406s)
+validation score 0.510 (seoul 0.520, busan 0.466, tokyo 0.523, osaka 0.457, taipei 0.583)
+wrote /content/drive/MyDrive/mas1004/assignment2/results/track_b_balanced_epochs/model.onnx: 11.17 million parameters, 1.81 billion multiply-adds
+copied to submission/. Check it with: python src/check_submission.py
+
+[2/2] python src/check_submission.py --no-val
+/content/drive/MyDrive/mas1004/assignment2/submission/model.onnx: 44.7 MB, 11.17 million parameters, 1.81 billion multiply-adds per 224 x 224 photo
+  limits: 12 million parameters, 2.0 billion multiply-adds
+  format and limits: OK
+
+All queued runs are done.
