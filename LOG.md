@@ -132,7 +132,7 @@ osaka has quite a few photo that have darker light, for outside photos. Tokyo ha
 ## 2026-11-08 track_b_balanced_smaller_lr (Track B)
 - changed: on top of track_b_balanced, peak learning rate from 3e-4 to 1.5e-4 (--lr 1.5e-4); everything else the same (ResNet18 at 224, 4 epochs, --balance)
 - why: fro track B let's try to change the learning rate as for track A but this time instead of two third (2e-4) I want to try half (1.5e-4). Since smaller lr worked for track A for seoul, and busan, this could be interesting to see if in this case it's too small or not, and can be useful overall.
-- validation: 0.496 (before: 0.4976, track_b_balanced); the first Colab run on 8 November stopped when the free GPU time ran out, this is the second, on 9 November
+- validation: 0.4955 (before: 0.4976, track_b_balanced); the first Colab run on 8 November stopped when the free GPU time ran out, this is the second, on 9 November
 - what it means: Compared to track A, a smaller learning rate (in this case half) for track B didn't bring the validation down significantly, which leaves open whether using a smaller learning rate, like in track A, gives a different result, and could be useful for the model.
 
 ## Leaderboard
