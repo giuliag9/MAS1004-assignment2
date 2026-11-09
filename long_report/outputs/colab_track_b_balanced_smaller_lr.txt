@@ -1,0 +1,16 @@
+[1/2] python src/train_b.py --tag track_b_balanced_smaller_lr --balance --lr 1.5e-4 --submit
+44257 photos (seoul 11274, busan 5191, tokyo 13347, osaka 7200, taipei 7245) on cuda
+epoch 1/4: loss 1.348 (412s)
+epoch 2/4: loss 1.074 (817s)
+epoch 3/4: loss 0.931 (1235s)
+epoch 4/4: loss 0.847 (1648s)
+validation score 0.496 (seoul 0.505, busan 0.449, tokyo 0.513, osaka 0.445, taipei 0.566)
+wrote /content/drive/MyDrive/mas1004/assignment2/results/track_b_balanced_smaller_lr/model.onnx: 11.17 million parameters, 1.81 billion multiply-adds
+copied to submission/. Check it with: python src/check_submission.py
+
+[2/2] python src/check_submission.py --no-val
+/content/drive/MyDrive/mas1004/assignment2/submission/model.onnx: 44.7 MB, 11.17 million parameters, 1.81 billion multiply-adds per 224 x 224 photo
+  limits: 12 million parameters, 2.0 billion multiply-adds
+  format and limits: OK
+
+All queued runs are done.
