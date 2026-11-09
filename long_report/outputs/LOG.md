@@ -140,6 +140,7 @@ osaka has quite a few photo that have darker light, for outside photos. Tokyo ha
 - why: for track B I want to try something different that I didn't try with track A, meaning having more epochs. It could be useful for the model, but as for the learning rate I wouldn't increase them too much. / I want to try with 6 epoch for track b, applied on track_b_balanced
 - validation: 0.5100 (before: 0.4976, track_b_balanced)
 - what it means: It seems like having more epochs helped the model training, and it worked overall for most of the cities, with only Seoul going a bit down. Whereas before that the changes such as balanced and balanced_smaller_lr helped maximum 3 cities at a time. Also this result means that having 6 epoch is not overly increased to the point it doesn't give good results, and perhaps it could even be increased more
+- released as track-b-3 "Track B Balanced 6 epochs" (9 November)
 
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
