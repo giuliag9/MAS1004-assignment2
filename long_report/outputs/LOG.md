@@ -135,6 +135,12 @@ osaka has quite a few photo that have darker light, for outside photos. Tokyo ha
 - validation: 0.4955 (before: 0.4976, track_b_balanced); the first Colab run on 8 November stopped when the free GPU time ran out, this is the second, on 9 November
 - what it means: Compared to track A, a smaller learning rate (in this case half) for track B didn't bring the validation down significantly, which leaves open whether using a smaller learning rate, like in track A, gives a different result, and could be useful for the model.
 
+## 2026-11-09 track_b_balanced_epochs (Track B)
+- changed: on top of track_b_balanced, 6 epochs instead of 4 (--epochs 6); everything else the same (ResNet18 at 224, learning rate 3e-4, --balance)
+- why: for track B I want to try something different that I didn't try with track A, meaning having more epochs. It could be useful for the model, but as for the learning rate I wouldn't increase them too much. / I want to try with 6 epoch for track b, applied on track_b_balanced
+- validation: (waiting for the Colab run) (before: 0.4976, track_b_balanced)
+- what it means: 
+
 ## Leaderboard
 - track-a-1 "starter recipe" (released 30 October): leaderboard score 0.400 (0.395–0.403), grader's validation 0.497
   - leaderboard per city: seoul 0.62, busan 0.19 tokyo 0.70 osaka 0.25 taipei 0.23
@@ -148,3 +154,4 @@ osaka has quite a few photo that have darker light, for outside photos. Tokyo ha
   - leaderboard per city: seoul 0.63	busan 0.24	tokyo 0.61	osaka 0.30	taipei 0.24
 - why validation and leaderboard differ (first thought): it is different because the images are different, not the ones on which the starter recipe trained on
 - why validation and leaderboard differ (after talking about it): the reason why the valiadation on leader board is different might be because the images are not similar to the one in validation
+- why validation and leaderboard differ (after more leaderboard scores): Overall the leaderboard score was always lower than my validation. Since the photos are from Youtube and the README says the channels are not in the starter data, the reason could be that the photos look different in some characteristics, which are not considered when making changes. This can also be given by the fact that the starter training photos don't include only photos from Youtube.
