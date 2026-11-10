@@ -104,7 +104,7 @@ What it means: ``The change in showing more outside for tokyo didn't work the sa
 In Track A, although 8 changes were made, only 2 improved from the previous one, meaning that the other changes were not necessarily effective for the overall model training, even if some changes were good for some specific cities (for example balanced\_brightness improved Busan, Osaka and Taipei), but still contributed to provide information and help in the process of trying one change after the other.
 
 \subsection*{My final recipe}
-The final Track A I choose is balanced\_zoom\_small\_lr. The reason is that it is the one that in my training had the highest validation (0.5138), even a bit more than balanced by itself. Moreover, this recipe combines 3 changes that are useful for various cities.
+The final Track A I choose is balanced\_zoom\_small\_lr, released as \texttt{track-a-3}. The reason is that it is the one that in my training had the highest validation (0.5138), even a bit more than balanced by itself. Moreover, this recipe combines 3 changes that are useful for various cities.
 
 % ---------------------------------------------------------------------------
 \section*{Decisions made from the photos}
@@ -236,7 +236,7 @@ What it means: ``It seems like having more epochs helped the model training, and
 For Track B no extra photos were added, so the model was trained on the starter training photos only.
 
 \subsection*{My final model}
-The final Track B I choose is track\_b\_balanced\_epochs.
+The final Track B I choose is track\_b\_balanced\_epochs, released as \texttt{track-b-3}.
 
 \subsection*{My Track B submission checked as the grader checks it}
 \texttt{check\_submission.py --no-val} on the files of release track-b-3:
