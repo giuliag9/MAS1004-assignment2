@@ -156,8 +156,6 @@ Overall, the mistakes from balanced are not the exact same as the baseline, even
 \subsection*{Dropping photos by a rule (Step 7)}
 I looked at the suspects sheets for balanced and noticed some similarities among the cities.
 
-\sidebyside{figures/suspects_balanced_seed0_busan_00.png}{Suspects of balanced, Busan}{figures/suspects_balanced_seed0_tokyo_00.png}{Suspects of balanced, Tokyo}
-
 Each suspects sheet (\texttt{suspects\_balanced\_seed0\_<city>\_00}) shows, for one city, the 48 training photos, out of every fourth one, that the balanced model gave the lowest probability for their own city.
 
 Here is what I noticed in them:
@@ -172,6 +170,11 @@ Suspect balanced Taipei: Here similarly there are photos of objects, animal, and
 
 Suspect balanced Tokyo: I notice photos of food, cars and people.
 \end{quote}
+
+The photos below are examples of the suspects sheets for Busan and Tokyo.
+
+\sidebyside{figures/suspects_balanced_seed0_busan_00.png}{Suspects of balanced, Busan}{figures/suspects_balanced_seed0_tokyo_00.png}{Suspects of balanced, Tokyo}
+
 
 The rule I wrote before dropping any photo, from my lab notebook:
 \begin{quote}\small
