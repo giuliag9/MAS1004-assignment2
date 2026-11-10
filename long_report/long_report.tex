@@ -253,14 +253,17 @@ release & title & & score & seoul & busan & tokyo & osaka & taipei \\
 \midrule
 track-a-1 & starter recipe & leaderboard & 0.400 (0.395--0.403) & 0.62 & 0.19 & 0.70 & 0.25 & 0.23 \\
  & & validation (grader) & 0.497 & & & & & \\
+ & & validation (my run) & 0.4961 & 0.5774 & 0.3763 & 0.6259 & 0.343 & 0.5577 \\
 track-a-2 & balanced & leaderboard & 0.410 (0.402--0.419) & 0.57 & 0.26 & 0.61 & 0.33 & 0.28 \\
  & & validation (grader) & 0.502 & & & & & \\
+ & & validation (my run) & 0.5117 & 0.5113 & 0.4424 & 0.5256 & 0.4511 & 0.6282 \\
 track-a-3 & balanced zoom+lr & leaderboard & 0.403 (0.397--0.414) & 0.55 & 0.28 & 0.61 & 0.30 & 0.28 \\
  & & validation (grader) & 0.509 & & & & & \\
+ & & validation (my run) & 0.5138 & 0.4932 & 0.4978 & 0.5022 & 0.437 & 0.6389 \\
 \bottomrule
 \end{tabular}
 \end{center}
-The leaderboard score is the mean of the three models the grader trains (seeds 0, 1 and 2), with the lowest and highest in brackets; the grader's validation is their mean on \texttt{data/starter/val}.
+The leaderboard score is the mean of the three models the grader trains (seeds 0, 1 and 2), with the lowest and highest in brackets; the grader's validation is their mean on \texttt{data/starter/val}. My run is the one model I trained on Colab with the same recipe (seed 0), scored on the same validation photos.
 
 \subsection*{Track B}
 \begin{center}\footnotesize
@@ -269,14 +272,15 @@ The leaderboard score is the mean of the three models the grader trains (seeds 0
 release & & score & seoul & busan & tokyo & osaka & taipei \\
 \midrule
 track-b-1 (track\_b1) & leaderboard & 0.389 & 0.60 & 0.16 & 0.68 & 0.23 & 0.28 \\
- & validation & 0.4933 & 0.593 & 0.3835 & 0.6127 & 0.3651 & 0.5123 \\
+ & validation (my run) & 0.4933 & 0.593 & 0.3835 & 0.6127 & 0.3651 & 0.5123 \\
 track-b-2 (track\_b\_balanced) & leaderboard & 0.405 & 0.63 & 0.24 & 0.61 & 0.30 & 0.24 \\
- & validation & 0.4976 & 0.5314 & 0.4403 & 0.4878 & 0.4521 & 0.5765 \\
+ & validation (my run) & 0.4976 & 0.5314 & 0.4403 & 0.4878 & 0.4521 & 0.5765 \\
 track-b-3 (track\_b\_balanced\_epochs) & leaderboard & 0.404 & 0.55 & 0.29 & 0.65 & 0.30 & 0.23 \\
- & validation & 0.51 & 0.5203 & 0.4662 & 0.5231 & 0.4572 & 0.5831 \\
+ & validation (my run) & 0.51 & 0.5203 & 0.4662 & 0.5231 & 0.4572 & 0.5831 \\
 \bottomrule
 \end{tabular}
 \end{center}
+For Track B the grader does not train the model again and shows no validation score, so the validation is from my own run on Colab, the same model I released.
 
 \subsection*{Why they disagree}
 My first thoughts, from my notes, after the first leaderboard score (only spelling and capital letters corrected):
