@@ -126,14 +126,14 @@ The final track A I choose is balanced\_zoom\_small\_lr. The reason is that it i
 While working on the assignment looking at the photo was useful.
 
 \subsection*{First look at the photos (Step 1)}
-What I noticed when I looked at the training photos of each city for the first time, from my lab notebook:
+What I noticed when I looked at the training photos of each city for the first time, from my notes (only spelling and capital letters corrected):
 \begin{quote}\small
 It seems like the outisde locations tells the city apart, however there are also many photos inside or of food\\
 As well as photo of object. Maybe the text present in the photo tell the city apart too
 \end{quote}
 
 \subsection*{The mistakes of the baseline (Step 3)}
-What I noticed on the sheets of the validation photos the baseline got most confidently wrong, from my lab notebook:
+What I noticed on the sheets of the validation photos the baseline got most confidently wrong, from my notes:
 \begin{quote}\small
 this is what i noticed by looking at the sheets. For Busan it seems like it makes mistake mostly on outside photos, mistaken them for other city. For Osaka I notice right away here the mistaken phots are also all outside, I would say they have higher contrast, and more darker color in the images. Interesting is that the majority are guessed to be Tokyo. Whereas for Busan the guess was not mostly Seoul but also Tokyo and Taipei. For Seoul the photo in this sheet are also on a first look all darker, with tones towards blue. I notice there are some vehicles, and a more mixed photos of outside and inside locations. For Taipei these mistaken photos have more nature in them than the other photos in other mistake sheets. Interesting is that image 34 has a text with “Taiwan’ written in it and still the model guessed it as Seoul. For Tokyo  images in this mistake sheets are much more colourful than the other sheets. A mix of city view streets, cars and people. I think overall the mistakes have in common two major elements: first it's mostly outside photos, second it is images taken from afar, not with a closeup or focus but of general surroundings.
 \end{quote}
@@ -178,7 +178,7 @@ The photos below are examples of the suspects sheets for Busan and Tokyo.
 \sidebyside{figures/suspects_balanced_seed0_busan_00.png}{Suspects of balanced, Busan}{figures/suspects_balanced_seed0_tokyo_00.png}{Suspects of balanced, Tokyo}
 
 
-The rule I wrote before dropping any photo, from my lab notebook:
+The rule I wrote before dropping any photo, from my notes:
 \begin{quote}\small
 I think overall I notice that there als also many outside photos, but I also think that ouside photos usually have a lot of elements into them that can be useful for the model, so I wouldn't drop them. I think finding one specific only rule is not easy as the images a various, so I think the rule I want to make follows what I noticed, meaning photos that are closeups/focus on only one object or thing, that doesn't give much other element in the photo.
 \end{quote}
@@ -197,7 +197,7 @@ After dropping the 61 photos, \texttt{curate.py count} printed:
 
 Validation before (balanced): 0.5117; after (balanced\_rule\_drop): 0.4952. Afterwards the 61 photos were put back.
 
-What I think it means, from my lab notebook:
+What I think it means, from my notes:
 \begin{quote}\small
 the validation on this training was lower than the normal balanced so it makes me think that perhaps what I decided to drop and my rule was not the best choice.
 \end{quote}
@@ -267,7 +267,7 @@ track-b-3 (track\_b\_balanced\_epochs) & leaderboard & 0.404 & 0.55 & 0.29 & 0.6
 \end{tabular}
 \end{center}
 
-Why I think validation and leaderboard disagree. My first thoughts, from my lab notebook, after the first leaderboard score:
+Why I think validation and leaderboard disagree. My first thoughts, from my notes, after the first leaderboard score:
 \begin{quote}\small
 it is different because the images are different, not the ones on which the starter recipe trained on
 
