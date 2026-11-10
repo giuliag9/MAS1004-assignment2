@@ -51,21 +51,21 @@ balanced\_zoom\_lr\_outside\_tokyo & balanced\_zoom\_small\_lr & Tokyo only: osv
 \end{tabular}
 \end{center}
 
-Each run, with its summary, and my reason and what I think the result means in my own words:
+Each run, with its summary, and my reason and what I think the result means in my own words (only spelling and capital letters corrected):
 {\small
 \par\medskip\noindent\textbf{baseline}\par
 The first train was on the baseline, both with seed 0 and 1 as requested from the assignment.\par
-Why: ``I trained the starter recipe with seed 0 and 1 and the tag baseline as the step 2 said. After doing step 1 and looked at the photos I noted what could tell the cities apart, but decided to first train the starter recipe and later make changes. In step 3 I can look at the mistake ofthe starter recipe, and have a better idea for the changes.''\par
+Why: ``I trained the starter recipe with seed 0 and 1 and the tag baseline as the step 2 said. After doing step 1 and looked at the photos I noted what could tell the cities apart, but decided to first train the starter recipe and later make changes. In step 3 I can look at the mistake of the starter recipe, and have a better idea for the changes.''\par
 Validation: 0.4961 (seed 0), 0.4922 (seed 1)\par
-What it means: ``From what I understood, a seed changes the random starting point, so it's telling me there is a slight difference based on where the starting point it, but i'm not sure is telling much else since it is a very small change.''
+What it means: ``From what I understood, a seed changes the random starting point, so it's telling me there is a slight difference based on where the starting point it, but I'm not sure is telling much else since it is a very small change.''
 \par\medskip\noindent\textbf{more\_often\_outside}\par
 The first change was applied on the baseline and involved making the photos that represented outside locations being seen more often by the model.\par
 Why: ``For the first change I think it's good to start from what I noticed in the mistake sheets. The first element was that it was outside photos, second was photos with no closeups. I would do one change at a time. Since the model got wrong many outside photos it could be useful to train it on a set of data where the outside images are many and appear more times. I think I wouldn't delete the inside photos but it would be good to make the outside photos appear more often during the training. / yes, let's use the name of the file since doing it by checking each photo is not possible. This way it should be mostly outside pictures. So let's do it for both youtube and osv5m, twice as often for now.''\par
 Validation: 0.4876 (before: 0.4961, baseline seed 0)\par
-What it means: ``I think this results tells me that the outside photo are perhaps a problem. i thought that training the model on more photos of the outside would be useful but the validation was lower than the starting recipe, only Osaka had a higher validation.''
+What it means: ``I think this results tells me that the outside photo are perhaps a problem. I thought that training the model on more photos of the outside would be useful but the validation was lower than the starting recipe, only Osaka had a higher validation.''
 \par\medskip\noindent\textbf{balanced}\par
 The second change was applied over baseline and aimed to make the photos of the cities being equally drawn.\par
-Why: ``let's try to make the model train on the same amount of photo for each city. It could be useful for the model to train equally on each city photos, and it could be a good point for then observing changes and what mistakes it makes in that condition''\par
+Why: ``Let's try to make the model train on the same amount of photo for each city. It could be useful for the model to train equally on each city photos, and it could be a good point for then observing changes and what mistakes it makes in that condition''\par
 Validation: 0.5117 (before: 0.4961, baseline seed 0)\par
 What it means: ``This results tells me that it's good for the model to train on equal variety of photos from each city, even if it means that Seoul and Tokyo got lower score.''
 \par\medskip\noindent\textbf{balanced\_zoom}\par
@@ -75,24 +75,24 @@ Validation: 0.5089 (before: 0.5117, balanced)\par
 What it means: ``The results tell me that adding the zoom to the balanced didn't improve the model overall, although there are some improvements for Busan and Taipei, but Seoul and Tokyo went down a bit. So the zoom was useful for some city but not for others, meaning it's not an overall change that works for all the cities. It could be kept into consideration to combine in a second moment with other changes.''
 \par\medskip\noindent\textbf{balanced\_brightness}\par
 The fourth change was applied on balanced and it was about varying the brightness of the photos.\par
-Why: ``for the next change I would start from balanced again, in order to check the change without zoom. I think at this point I should address another element I noticed in the mistake sheets, which is that some photos in the mistake are darker. So it could be interesting to make some photos lighter for the training, perhaps by making the light vary like for the zoom / let's use both, darker and lighter 0.5, - 1.5 , since in the mistakes for some cities the photos were darker, while in other not.''\par
+Why: ``For the next change I would start from balanced again, in order to check the change without zoom. I think at this point I should address another element I noticed in the mistake sheets, which is that some photos in the mistake are darker. So it could be interesting to make some photos lighter for the training, perhaps by making the light vary like for the zoom / let's use both, darker and lighter 0.5, - 1.5 , since in the mistakes for some cities the photos were darker, while in other not.''\par
 Validation: 0.5064 (before: 0.5117, balanced)\par
-What it means: ``this results tell me that change in brightness were less useful than zoom, but it still was slighly good for Busan Osaka and Taipei. For Osaka it was more effective than zoom. It shows a differnet situation for Seoul and Tokyo, which makes me think I should consider these two city in similar way since both went down and up together with changes.''
+What it means: ``This results tell me that change in brightness were less useful than zoom, but it still was slightly good for Busan Osaka and Taipei. For Osaka it was more effective than zoom. It shows a different situation for Seoul and Tokyo, which makes me think I should consider these two city in similar way since both went down and up together with changes.''
 \par\medskip\noindent\textbf{balanced\_rule\_drop}\par
 The fifth change was based on balanced and came from the observation of the suspect sheets and consequent rule and drop of photos.\par
-Why: ``my Step 7 rule above''\par
+Why: ``My Step 7 rule above''\par
 Validation: 0.4952 (before: 0.5117, balanced)\par
-What it means: ``the validation on this training was lower than the normal balanced so it makes me think that perhaps what I decided to drop and my rule was not the best choice.''
+What it means: ``The validation on this training was lower than the normal balanced so it makes me think that perhaps what I decided to drop and my rule was not the best choice.''
 \par\medskip\noindent\textbf{balanced\_smaller\_lr}\par
 The sixth change was applied on balanced and aimed to make the learning rate smaller to see how it would impact the model.\par
 Why: ``I think I want to try to change the learning rate on balanced. I remember from assignment 1 that a larger learning rate was not necessarily better so in this case I would make it a bit smaller. / I wouldn't go too much lower so 2e-4 for now''\par
 Validation: 0.5065 (before: 0.5117, balanced)\par
-What it means: ``the results of this training are lower than the balanced one, it was good for Seoul but not for Taipei. It seems like the changes I made after balanced, were less effective or were only effective for some cities but not for the overall validation.''
+What it means: ``The results of this training are lower than the balanced one, it was good for Seoul but not for Taipei. It seems like the changes I made after balanced, were less effective or were only effective for some cities but not for the overall validation.''
 \par\medskip\noindent\textbf{balanced\_zoom\_small\_lr}\par
 The seventh change, combined previous changes, zoom and smaller learning rate, over balanced to observe how the combination of two changes would result.\par
 Why: ``At this point I think it could be interesting to try and combine previous changes since after balanced, the other changes were positive for some cities and negative for others. Perhaps combining the change in zoom (which previously was positive for Busan and Taipei especially) with smaller lr (positive for seoul), could create an overall better validation than balanced by itself. The risk is that the two changes cancel each other and the validation ends up still lower, but in that case it would tell me that it's not the best way to combine.''\par
 Validation: 0.5138 (before: 0.5117, balanced)\par
-What it means: ``combining zoom and smaller lr was useful, especially for Busan and Taipei. I expected Seoul to have a higher score since with the learning rate it increased. I also thought tokyo would stay around the scores of zoom and small lr, but didn't, meaning I still have to find what makes Tokyo score go up.''
+What it means: ``Combining zoom and smaller lr was useful, especially for Busan and Taipei. I expected Seoul to have a higher score since with the learning rate it increased. I also thought tokyo would stay around the scores of zoom and small lr, but didn't, meaning I still have to find what makes Tokyo score go up.''
 \par\medskip\noindent\textbf{balanced\_zoom\_lr\_outside\_tokyo}\par
 The eighth change wanted to apply another change on top of the previous one, to test whether showing more often outside photos for Tokyo would have a positive effect for the city.\par
 Why: ``I'm thinking of making the more often outside for tokyo (since in that change previously tokyo was higher than in balanced) / Then, I want to try only more outside for tokyo, since I'm more interested now to see how the more outside work on the balanced. / use the same twice as often for the outside for tokyo''\par
@@ -133,9 +133,9 @@ As well as photo of object. Maybe the text present in the photo tell the city ap
 \end{quote}
 
 \subsection*{The mistakes of the baseline (Step 3)}
-What I noticed on the sheets of the validation photos the baseline got most confidently wrong, from my notes (shortened):
+What I noticed on the sheets of the validation photos the baseline got most confidently wrong, from my notes (shortened, spelling corrected):
 \begin{quote}\small
-For Busan it seems like it makes mistake mostly on outside photos, mistaken them for other city. For Osaka I notice right away here the mistaken phots are also all outside, I would say they have higher contrast, and more darker color in the images. Interesting is that the majority are guessed to be Tokyo. Whereas for Busan the guess was not mostly Seoul but also Tokyo and Taipei. For Seoul the photo in this sheet are also on a first look all darker, with tones towards blue. I notice there are some vehicles, and a more mixed photos of outside and inside locations. For Taipei these mistaken photos have more nature in them than the other photos in other mistake sheets. Interesting is that image 34 has a text with “Taiwan’ written in it and still the model guessed it as Seoul. For Tokyo  images in this mistake sheets are much more colourful than the other sheets. A mix of city view streets, cars and people. I think overall the mistakes have in common two major elements: first it's mostly outside photos, second it is images taken from afar, not with a closeup or focus but of general surroundings.
+For Busan it seems like it makes mistake mostly on outside photos, mistaken them for other city. For Osaka I notice right away here the mistaken photos are also all outside, I would say they have higher contrast, and more darker color in the images. Interesting is that the majority are guessed to be Tokyo. Whereas for Busan the guess was not mostly Seoul but also Tokyo and Taipei. For Seoul the photo in this sheet are also on a first look all darker, with tones towards blue. I notice there are some vehicles, and a more mixed photos of outside and inside locations. For Taipei these mistaken photos have more nature in them than the other photos in other mistake sheets. Interesting is that image 34 has a text with “Taiwan’ written in it and still the model guessed it as Seoul. For Tokyo  images in this mistake sheets are much more colourful than the other sheets. A mix of city view streets, cars and people. I think overall the mistakes have in common two major elements: first it's mostly outside photos, second it is images taken from afar, not with a closeup or focus but of general surroundings.
 \end{quote}
 
 \picturefile{figures/mistakes_baseline_seed0_osaka_00.png}
@@ -178,9 +178,9 @@ The photos below are examples of the suspects sheets for Busan and Tokyo.
 \sidebyside{figures/suspects_balanced_seed0_busan_00.png}{Suspects of balanced, Busan}{figures/suspects_balanced_seed0_tokyo_00.png}{Suspects of balanced, Tokyo}
 
 
-The rule I wrote before dropping any photo, from my notes:
+The rule I wrote before dropping any photo, from my notes (only spelling corrected):
 \begin{quote}\small
-I think overall I notice that there als also many outside photos, but I also think that ouside photos usually have a lot of elements into them that can be useful for the model, so I wouldn't drop them. I think finding one specific only rule is not easy as the images a various, so I think the rule I want to make follows what I noticed, meaning photos that are closeups/focus on only one object or thing, that doesn't give much other element in the photo.
+I think overall I notice that there are also many outside photos, but I also think that outside photos usually have a lot of elements into them that can be useful for the model, so I wouldn't drop them. I think finding one specific only rule is not easy as the images a various, so I think the rule I want to make follows what I noticed, meaning photos that are closeups/focus on only one object or thing, that doesn't give much other element in the photo.
 \end{quote}
 
 My requests to the agent for these decisions, word for word:
@@ -197,14 +197,14 @@ After dropping the 61 photos, \texttt{curate.py count} printed:
 
 Validation before (balanced): 0.5117; after (balanced\_rule\_drop): 0.4952. Afterwards the 61 photos were put back.
 
-What I think it means, from my notes:
+What I think it means, from my notes (only capital letters corrected):
 \begin{quote}\small
-the validation on this training was lower than the normal balanced so it makes me think that perhaps what I decided to drop and my rule was not the best choice.
+The validation on this training was lower than the normal balanced so it makes me think that perhaps what I decided to drop and my rule was not the best choice.
 \end{quote}
 
 Looking back at my rule, after the result:
 \begin{quote}\small
-I think thinking of the rule I made, it's worth mentioning that it probably had some limitations. When I looked at the suspects I did noticed the closeups on various photos and photos that focused on a specific thing (food, people, car etc). The rule I made was not a strict rule such as ``outside photos should be dropped'' or ``food photos should be dropped'' but it involved various things, such as close up or jsut focus on something. Therefore, it is likely that the photos I chose to drop after were also based on my subjectivity.
+I think thinking of the rule I made, it's worth mentioning that it probably had some limitations. When I looked at the suspects I did noticed the closeups on various photos and photos that focused on a specific thing (food, people, car etc). The rule I made was not a strict rule such as ``Outside photos should be dropped'' or ``Food photos should be dropped'' but it involved various things, such as close up or just focus on something. Therefore, it is likely that the photos I chose to drop after were also based on my subjectivity.
 \end{quote}
 
 
@@ -226,26 +226,26 @@ track\_b\_balanced\_epochs & track\_b\_balanced & 6 epochs (was 4) & 0.51 & 0.52
 \end{tabular}
 \end{center}
 
-Each run, with its summary, and my reason and what I think the result means in my own words:
+Each run, with its summary, and my reason and what I think the result means in my own words (only spelling and capital letters corrected):
 {\small
 \par\medskip\noindent\textbf{track\_b1}\par
 The first training was to train the model as given.\par
-Why: ``this run is the requested from step 8, train track b as it is.''\par
+Why: ``This run is the requested from step 8, train track b as it is.''\par
 Validation: 0.4933 (Track A baseline seed 0: 0.4961)\par
-What it means: ``It's slighltly different from the track A baseline, but still somewhat similar, where Tokyo has highest score, seoul is slightly higher than the baseline, and the same is for Busan, and Osaka.''
+What it means: ``It's slightly different from the track A baseline, but still somewhat similar, where Tokyo has highest score, Seoul is slightly higher than the baseline, and the same is for Busan, and Osaka.''
 \par\medskip\noindent\textbf{track\_b\_balanced}\par
 The first change used what worked in Track A, meaning having photos of each city equally drawn during the training.\par
 Why: ``I want the first change for track B to follow what worked for track A, meaning balance, so that each city photos are drawn equally. The reason is that as a first step I think it's good to go with what worked in the other track as well, before trying other changes.''\par
 Validation: 0.4976 (before: 0.4933, track\_b1)\par
-What it means: ``the results show that as for track A balanced improved the model, especially for Busan Osaka and Taipei.''
+What it means: ``The results show that as for track A balanced improved the model, especially for Busan Osaka and Taipei.''
 \par\medskip\noindent\textbf{track\_b\_balanced\_smaller\_lr}\par
 The second change was applied over balanced and wanted to train the model with a smaller learning rate, this time halved.\par
-Why: ``fro track B let's try to change the learning rate as for track A but this time instead of two third (2e-4) I want to try half (1.5e-4). Since smaller lr worked for track A for seoul, and busan, this could be interesting to see if in this case it's too small or not, and can be useful overall.''\par
+Why: ``For track B let's try to change the learning rate as for track A but this time instead of two third (2e-4) I want to try half (1.5e-4). Since smaller lr worked for track A for seoul, and busan, this could be interesting to see if in this case it's too small or not, and can be useful overall.''\par
 Validation: 0.4955 (before: 0.4976, track\_b\_balanced)\par
 What it means: ``Compared to track A, a smaller learning rate (in this case half) for track B didn't bring the validation down significantly, which leaves open whether using a smaller learning rate, like in track A, gives a different result, and could be useful for the model.''
 \par\medskip\noindent\textbf{track\_b\_balanced\_epochs}\par
 The third change was applied on balanced and increased the epochs to 6.\par
-Why: ``for track B I want to try something different that I didn't try with track A, meaning having more epochs. It could be useful for the model, but as for the learning rate I wouldn't increase them too much. / I want to try with 6 epoch for track b, applied on track\_b\_balanced''\par
+Why: ``For track B I want to try something different that I didn't try with track A, meaning having more epochs. It could be useful for the model, but as for the learning rate I wouldn't increase them too much. / I want to try with 6 epoch for track b, applied on track\_b\_balanced''\par
 Validation: 0.5100 (before: 0.4976, track\_b\_balanced)\par
 What it means: ``It seems like having more epochs helped the model training, and it worked overall for most of the cities, with only Seoul going a bit down. Whereas before that the changes such as balanced and balanced\_smaller\_lr helped maximum 3 cities at a time. Also this result means that having 6 epoch is not overly increased to the point it doesn't give good results, and perhaps it could even be increased more''
 \par}
@@ -267,16 +267,16 @@ track-b-3 (track\_b\_balanced\_epochs) & leaderboard & 0.404 & 0.55 & 0.29 & 0.6
 \end{tabular}
 \end{center}
 
-Why I think validation and leaderboard disagree. My first thoughts, from my notes, after the first leaderboard score:
+Why I think validation and leaderboard disagree. My first thoughts, from my notes, after the first leaderboard score (only spelling and capital letters corrected):
 \begin{quote}\small
-it is different because the images are different, not the ones on which the starter recipe trained on
+It is different because the images are different, not the ones on which the starter recipe trained on
 
-the reason why the valiadation on leader board is different might be because the images are not similar to the one in validation
+The reason why the validation on leader board is different might be because the images are not similar to the one in validation
 \end{quote}
 
 My thought now, with the leaderboard scores of all my releases:
 \begin{quote}\small
-Overall the leaderboard score was always lower than my validation. Since the photos are from Youtube and the README says the channels are not in the starter data, the reason could be that the photos look different in some characteristics, which are not considered when making changes. This can also be given by the fact that the starter training photos don't include only photos from Youtube.
+Overall the leaderboard score was always lower than my validation. Since the photos are from YouTube and the README says the channels are not in the starter data, the reason could be that the photos look different in some characteristics, which are not considered when making changes. This can also be given by the fact that the starter training photos don't include only photos from YouTube.
 \end{quote}
 
 \subsection*{Your submission, as the grader sees it}
@@ -287,10 +287,10 @@ Overall the leaderboard score was always lower than my validation. Since the pho
 \section*{What made the difference}
 
 \subsection*{Track A}
-For track A the change that helped the most is balanced, the change that made all cities being drawn equally. Compared to the baseline seed 0 which gave 0.4961 as validation, balanced reached 0.5117, and was even higher than my first change more\_often\_outside that gave a lower validation than baseline 0.4876. In particualr balanced helped mainly Busan, Osaka and Taipei, while Seoul and Tokyo went down. After that change, the other changes I tried struggled to improve the model, until balanced\_zoom\_small\_lr which was applied on balanced and added two changes together (that I previously tried), but the improvement was less significant, only reaching a validation of 0.5138. As for the change that helped the least, it was balanced\_rule\_drop which was applied on balanced and only gave a validation of 0.4952. In that case, perhaps the rule I chose was not the best choice.
+For track A the change that helped the most is balanced, the change that made all cities being drawn equally. Compared to the baseline seed 0 which gave 0.4961 as validation, balanced reached 0.5117, and was even higher than my first change more\_often\_outside that gave a lower validation than baseline 0.4876. In particular balanced helped mainly Busan, Osaka and Taipei, while Seoul and Tokyo went down. After that change, the other changes I tried struggled to improve the model, until balanced\_zoom\_small\_lr which was applied on balanced and added two changes together (that I previously tried), but the improvement was less significant, only reaching a validation of 0.5138. As for the change that helped the least, it was balanced\_rule\_drop which was applied on balanced and only gave a validation of 0.4952. In that case, perhaps the rule I chose was not the best choice.
 
 \subsection*{Track B}
-For track B, the change that helped the most was increasing epochs from 4 to 6, applied on balanced that was 0.4976 and reached 0.5100. Particularly, 4 cities went up comapred to previous changes. The change that helped the least was, on the other hand, adding over balanced also a halved learning rate, which brought the validation at 0.4955, so lower than balanced, and was positive only for Busan (0.4489) and Tokyo (0.5133)
+For track B, the change that helped the most was increasing epochs from 4 to 6, applied on balanced that was 0.4976 and reached 0.5100. Particularly, 4 cities went up compared to previous changes. The change that helped the least was, on the other hand, adding over balanced also a halved learning rate, which brought the validation at 0.4955, so lower than balanced, and was positive only for Busan (0.4489) and Tokyo (0.5133)
 
 \subsection*{What I would do next with one more week}
 Regarding what I would do next, it's probably related to try more changes. For Track A I would keep trying to either find what improves Tokyo or other augmentation that can be useful overall for the model and all 5 cities. Another thing I could do is try another rule for dropping photos for the training. For Track B I would probably keep trying changes as well, but this time not necessarily related to the changes I made in Track A, since Track B allows more changes. I would try more decisive changes such as increasing the epochs by much more than I did, to assess if it's useful. In general, I would work on each track much more separately.
