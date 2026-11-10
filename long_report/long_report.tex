@@ -137,10 +137,6 @@ What I noticed on the sheets of the validation photos the baseline got most conf
 For Busan it seems like it makes mistake mostly on outside photos, mistaken them for other city. For Osaka I notice right away here the mistaken photos are also all outside, I would say they have higher contrast, and more darker color in the images. Interesting is that the majority are guessed to be Tokyo. Whereas for Busan the guess was not mostly Seoul but also Tokyo and Taipei. For Seoul the photo in this sheet are also on a first look all darker, with tones towards blue. I notice there are some vehicles, and a more mixed photos of outside and inside locations. For Taipei these mistaken photos have more nature in them than the other photos in other mistake sheets. Interesting is that image 34 has a text with “Taiwan’ written in it and still the model guessed it as Seoul. For Tokyo  images in this mistake sheets are much more colourful than the other sheets. A mix of city view streets, cars and people. I think overall the mistakes have in common two major elements: first it's mostly outside photos, second it is images taken from afar, not with a closeup or focus but of general surroundings.
 \end{quote}
 
-\begin{center}
-\picturefile[0.8\linewidth]{figures/mistakes_baseline_seed0_osaka_00.png}\par\small Mistakes of the baseline, Osaka: the 48 validation photos of Osaka the baseline got most confidently wrong
-\end{center}
-
 \subsection*{The mistakes of balanced, compared with the baseline}
 After my second change balanced I decided to have a look at the mistake sheets of it and see how it was different from baseline mistakes. The following is what I noticed:
 \begin{quote}\small
@@ -154,11 +150,9 @@ Tokyo mistakes are also still colorful.
 Overall, the mistakes from balanced are not the exact same as the baseline, even if some photos are still the same. I think in general the type of photos in the mistake is sort of the same as baseline (apart from the difference in Osaka). This can be understandable since the only change in balanced is that the photos are drawn equally, but I haven’t made other changes to it, or removed photos.
 \end{quote}
 
-The photo below is an example of the mistake sheets of balanced, for Osaka.
+The photos below are examples of the mistake sheets of the baseline and of balanced, for Osaka, for comparison.
 
-\begin{center}
-\picturefile[0.8\linewidth]{figures/mistakes_balanced_seed0_osaka_00.png}\par\small Mistakes of balanced, Osaka: the 48 validation photos of Osaka balanced got most confidently wrong
-\end{center}
+\sidebyside{figures/mistakes_baseline_seed0_osaka_00.png}{Mistakes of the baseline, Osaka}{figures/mistakes_balanced_seed0_osaka_00.png}{Mistakes of balanced, Osaka}
 
 \subsection*{Dropping photos by a rule}
 I looked at the suspects sheets for balanced and noticed some similarities among the cities.
@@ -181,7 +175,6 @@ Suspect balanced Tokyo: I notice photos of food, cars and people.
 The photos below are examples of the suspects sheets for Busan and Tokyo.
 
 \sidebyside{figures/suspects_balanced_seed0_busan_00.png}{Suspects of balanced, Busan}{figures/suspects_balanced_seed0_tokyo_00.png}{Suspects of balanced, Tokyo}
-
 
 The rule I wrote before dropping any photo, from my notes (only spelling corrected):
 \begin{quote}\small
@@ -211,7 +204,6 @@ Looking back at my rule, after the result:
 \begin{quote}\small
 I think thinking of the rule I made, it's worth mentioning that it probably had some limitations. When I looked at the suspects I did noticed the closeups on various photos and photos that focused on a specific thing (food, people, car etc). The rule I made was not a strict rule such as ``Outside photos should be dropped'' or ``Food photos should be dropped'' but it involved various things, such as close up or just focus on something. Therefore, it is likely that the photos I chose to drop after were also based on my subjectivity.
 \end{quote}
-
 
 % ---------------------------------------------------------------------------
 \section*{Track B}
