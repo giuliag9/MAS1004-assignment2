@@ -276,7 +276,14 @@ track-b-3 (track\_b\_balanced\_epochs) & leaderboard & 0.404 & 0.55 & 0.29 & 0.6
 \end{tabular}
 \end{center}
 
-Why I think validation and leaderboard disagree. My first thoughts, from my notes, after the first leaderboard score (only spelling and capital letters corrected):
+\subsection*{Your submission, as the grader sees it}
+\texttt{check\_submission.py --no-val} on the files of release track-b-3:
+\outputfile{outputs/check_submission.txt}
+
+% ---------------------------------------------------------------------------
+\section*{Why validation and leaderboard disagree}
+
+My first thoughts, from my notes, after the first leaderboard score (only spelling and capital letters corrected):
 \begin{quote}\small
 It is different because the images are different, not the ones on which the starter recipe trained on
 
@@ -287,10 +294,6 @@ My thought now, with the leaderboard scores of all my releases:
 \begin{quote}\small
 Overall the leaderboard score was always lower than my validation. Since the photos are from YouTube and the README says the channels are not in the starter data, the reason could be that the photos look different in some characteristics, which are not considered when making changes. This can also be given by the fact that the starter training photos don't include only photos from YouTube.
 \end{quote}
-
-\subsection*{Your submission, as the grader sees it}
-\texttt{check\_submission.py --no-val} on the files of release track-b-3:
-\outputfile{outputs/check_submission.txt}
 
 % ---------------------------------------------------------------------------
 \section*{What made the difference}
