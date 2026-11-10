@@ -125,13 +125,13 @@ The final track A I choose is balanced\_zoom\_small\_lr. The reason is that it i
 
 While working on the assignment, looking at the photos, particularly the mistake sheets and suspect sheets, was useful for choosing changes to try, and what could be improved.
 
-\subsection*{First look at the photos (Step 1)}
+\subsection*{First look at the photos}
 What I noticed when I looked at the training photos of each city for the first time, from my notes (only spelling and capital letters corrected):
 \begin{quote}\small
 It seems like the outside locations tells the city apart, however there are also many photos inside or of food, as well as photo of object. Maybe the text present in the photo tell the city apart too.
 \end{quote}
 
-\subsection*{The mistakes of the baseline (Step 3)}
+\subsection*{The mistakes of the baseline}
 What I noticed on the sheets of the validation photos the baseline got most confidently wrong, from my notes (shortened, spelling corrected):
 \begin{quote}\small
 For Busan it seems like it makes mistake mostly on outside photos, mistaken them for other city. For Osaka I notice right away here the mistaken photos are also all outside, I would say they have higher contrast, and more darker color in the images. Interesting is that the majority are guessed to be Tokyo. Whereas for Busan the guess was not mostly Seoul but also Tokyo and Taipei. For Seoul the photo in this sheet are also on a first look all darker, with tones towards blue. I notice there are some vehicles, and a more mixed photos of outside and inside locations. For Taipei these mistaken photos have more nature in them than the other photos in other mistake sheets. Interesting is that image 34 has a text with “Taiwan’ written in it and still the model guessed it as Seoul. For Tokyo  images in this mistake sheets are much more colourful than the other sheets. A mix of city view streets, cars and people. I think overall the mistakes have in common two major elements: first it's mostly outside photos, second it is images taken from afar, not with a closeup or focus but of general surroundings.
@@ -154,11 +154,13 @@ Tokyo mistakes are also still colorful.
 Overall, the mistakes from balanced are not the exact same as the baseline, even if some photos are still the same. I think in general the type of photos in the mistake is sort of the same as baseline (apart from the difference in Osaka). This can be understandable since the only change in balanced is that the photos are drawn equally, but I haven’t made other changes to it, or removed photos.
 \end{quote}
 
+The photo below is an example of the mistake sheets of balanced, for Osaka.
+
 \begin{center}
 \picturefile[0.8\linewidth]{figures/mistakes_balanced_seed0_osaka_00.png}\par\small Mistakes of balanced, Osaka: the 48 validation photos of Osaka balanced got most confidently wrong
 \end{center}
 
-\subsection*{Dropping photos by a rule (Step 7)}
+\subsection*{Dropping photos by a rule}
 I looked at the suspects sheets for balanced and noticed some similarities among the cities.
 
 Each suspects sheet (\texttt{suspects\_balanced\_seed0\_<city>\_00}) shows, for one city, the 48 training photos, out of every fourth one, that the balanced model gave the lowest probability for their own city.
