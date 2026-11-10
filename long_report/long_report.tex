@@ -107,6 +107,15 @@ The rule I wrote before dropping any photo, from my lab notebook:
 I think overall I notice that there als also many outside photos, but I also think that ouside photos usually have a lot of elements into them that can be useful for the model, so I wouldn't drop them. I think finding one specific only rule is not easy as the images a various, so I think the rule I want to make follows what I noticed, meaning photos that are closeups/focus on only one object or thing, that doesn't give much other element in the photo.
 \end{quote}
 
+My requests to the agent for these decisions, word for word:
+\begin{itemize}\small
+\item Drop 3, 16, 17, 20, 26, 28, 30, 32, 34, 44, 48, from suspects\_balanced\_seed0\_busan\_00.png because “closeup or focus on one thing”
+\item Drop 5, 6, 9, 10, 11, 16, 20, 34, 36, 48 from suspects\_balanced\_seed0\_osaka\_00.png  because “closeup or focus on one thing”
+\item Drop 1, 3,4, 7, 8, 18, 20, 22, 23, 26, 30, 33, 41, 43, from suspects\_balanced\_seed0\_seoul\_00.png because “closeup or focus on one thing”
+\item Drop 4, 5, 12, 15, 17, 26, 30, 31, 33, 36, 42, from suspects\_balanced\_seed0\_taipei\_00.png because “closeup or focus on one thing”
+\item Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects\_balanced\_seed0\_tokyo\_00.png because “closeup or focus on one thing”
+\end{itemize}
+
 After dropping the 61 photos, \texttt{curate.py count} printed:
 \outputfile{outputs/curate_count.txt}
 
@@ -122,14 +131,6 @@ Looking back at my rule, after the result:
 I think thinking of the rule I made, it's worth mentioning that it probably had some limitations. When I looked at the suspects I did noticed the closeups on various photos and photos that focused on a specific thing (food, people, car etc). The rule I made was not a strict rule such as ``outside photos should be dropped'' or ``food photos should be dropped'' but it involved various things, such as close up or jsut focus on something. Therefore, it is likely that the photos I chose to drop after were also based on my subjectivity.
 \end{quote}
 
-My requests to the agent for these decisions, word for word:
-\begin{itemize}\small
-\item Drop 3, 16, 17, 20, 26, 28, 30, 32, 34, 44, 48, from suspects\_balanced\_seed0\_busan\_00.png because “closeup or focus on one thing”
-\item Drop 5, 6, 9, 10, 11, 16, 20, 34, 36, 48 from suspects\_balanced\_seed0\_osaka\_00.png  because “closeup or focus on one thing”
-\item Drop 1, 3,4, 7, 8, 18, 20, 22, 23, 26, 30, 33, 41, 43, from suspects\_balanced\_seed0\_seoul\_00.png because “closeup or focus on one thing”
-\item Drop 4, 5, 12, 15, 17, 26, 30, 31, 33, 36, 42, from suspects\_balanced\_seed0\_taipei\_00.png because “closeup or focus on one thing”
-\item Drop 6, 9, 10, 14, 17, 18, 22, 23, 25, 31, 36, 39, 41, 42, 43, from suspects\_balanced\_seed0\_tokyo\_00.png because “closeup or focus on one thing”
-\end{itemize}
 
 % ---------------------------------------------------------------------------
 \section*{Track B}
