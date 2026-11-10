@@ -191,22 +191,22 @@ track\_b\_balanced\_epochs & track\_b\_balanced & 6 epochs (was 4) & 0.51 & 0.52
 Each run, with its summary, and my reason and what I think the result means in my own words:
 {\small
 \par\medskip\noindent\textbf{track\_b1}\par
-\fillin{Your summary sentence: the change and why.}\par
+The first train was the track as it is.\par
 Why: ``this run is the requested from step 8, train track b as it is.''\par
 Validation: 0.4933 (Track A baseline seed 0: 0.4961)\par
 What it means: ``It's slighltly different from the track A baseline, but still somewhat similar, where Tokyo has highest score, seoul is slightly higher than the baseline, and the same is for Busan, and Osaka.''
 \par\medskip\noindent\textbf{track\_b\_balanced}\par
-\fillin{Your summary sentence: the change and why.}\par
+The first change used what worked in Track A, meaning having photos of each city equally drawn during the training.\par
 Why: ``I want the first change for track B to follow what worked for track A, meaning balance, so that each city photos are drawn equally. The reason is that as a first step I think it's good to go with what worked in the other track as well, before trying other changes.''\par
 Validation: 0.4976 (before: 0.4933, track\_b1)\par
 What it means: ``the results show that as for track A balanced improved the model, especially for Busan Osaka and Taipei.''
 \par\medskip\noindent\textbf{track\_b\_balanced\_smaller\_lr}\par
-\fillin{Your summary sentence: the change and why.}\par
+The second change was applied over balanced and wanted to train the model with a smaller learning rate, this time halved.\par
 Why: ``fro track B let's try to change the learning rate as for track A but this time instead of two third (2e-4) I want to try half (1.5e-4). Since smaller lr worked for track A for seoul, and busan, this could be interesting to see if in this case it's too small or not, and can be useful overall.''\par
 Validation: 0.4955 (before: 0.4976, track\_b\_balanced)\par
 What it means: ``Compared to track A, a smaller learning rate (in this case half) for track B didn't bring the validation down significantly, which leaves open whether using a smaller learning rate, like in track A, gives a different result, and could be useful for the model.''
 \par\medskip\noindent\textbf{track\_b\_balanced\_epochs}\par
-\fillin{Your summary sentence: the change and why.}\par
+The third change was applied on balanced and increased the epochs to 6.\par
 Why: ``for track B I want to try something different that I didn't try with track A, meaning having more epochs. It could be useful for the model, but as for the learning rate I wouldn't increase them too much. / I want to try with 6 epoch for track b, applied on track\_b\_balanced''\par
 Validation: 0.5100 (before: 0.4976, track\_b\_balanced)\par
 What it means: ``It seems like having more epochs helped the model training, and it worked overall for most of the cities, with only Seoul going a bit down. Whereas before that the changes such as balanced and balanced\_smaller\_lr helped maximum 3 cities at a time. Also this result means that having 6 epoch is not overly increased to the point it doesn't give good results, and perhaps it could even be increased more''
