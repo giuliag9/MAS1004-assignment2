@@ -102,23 +102,7 @@ What it means: ``The change in showing more outside for tokyo didn't work the sa
 
 In Track A, although 8 changes were made, only 2 improved from the previous one, meaning that the other changes were not necessarily effective for the overall model training, even if some changes were good for some specific cities (for example balanced\_brightness improved Busan, Osaka and Taipei), but still contributed to provide information and help in the process of trying one change after the other.
 
-\subsection*{Validation compared with the leaderboard}
-\begin{center}\footnotesize
-\begin{tabular}{lllrrrrrr}
-\toprule
-release & title & & score & seoul & busan & tokyo & osaka & taipei \\
-\midrule
-track-a-1 & starter recipe & leaderboard & 0.400 (0.395--0.403) & 0.62 & 0.19 & 0.70 & 0.25 & 0.23 \\
- & & validation (grader) & 0.497 & & & & & \\
-track-a-2 & balanced & leaderboard & 0.410 (0.402--0.419) & 0.57 & 0.26 & 0.61 & 0.33 & 0.28 \\
- & & validation (grader) & 0.502 & & & & & \\
-track-a-3 & balanced zoom+lr & leaderboard & 0.403 (0.397--0.414) & 0.55 & 0.28 & 0.61 & 0.30 & 0.28 \\
- & & validation (grader) & 0.509 & & & & & \\
-\bottomrule
-\end{tabular}
-\end{center}
-The leaderboard score is the mean of the three models the grader trains (seeds 0, 1 and 2), with the lowest and highest in brackets; the grader's validation is their mean on \texttt{data/starter/val}.
-
+\subsection*{My final recipe}
 The final track A I choose is balanced\_zoom\_small\_lr. The reason is that it is the one that in my training had the highest validation (0.5138), even a bit more than balanced by itself. Moreover, this recipe combines 3 changes that are useful for various cities.
 
 % ---------------------------------------------------------------------------
@@ -260,7 +244,31 @@ What it means: ``It seems like having more epochs helped the model training, and
 
 For Track B no extra photos were added, so the model was trained on the starter training photos only.
 
-\subsection*{Validation compared with the leaderboard}
+\subsection*{Your submission, as the grader sees it}
+\texttt{check\_submission.py --no-val} on the files of release track-b-3:
+\outputfile{outputs/check_submission.txt}
+
+% ---------------------------------------------------------------------------
+\section*{Validation compared with the leaderboard}
+
+\subsection*{Track A}
+\begin{center}\footnotesize
+\begin{tabular}{lllrrrrrr}
+\toprule
+release & title & & score & seoul & busan & tokyo & osaka & taipei \\
+\midrule
+track-a-1 & starter recipe & leaderboard & 0.400 (0.395--0.403) & 0.62 & 0.19 & 0.70 & 0.25 & 0.23 \\
+ & & validation (grader) & 0.497 & & & & & \\
+track-a-2 & balanced & leaderboard & 0.410 (0.402--0.419) & 0.57 & 0.26 & 0.61 & 0.33 & 0.28 \\
+ & & validation (grader) & 0.502 & & & & & \\
+track-a-3 & balanced zoom+lr & leaderboard & 0.403 (0.397--0.414) & 0.55 & 0.28 & 0.61 & 0.30 & 0.28 \\
+ & & validation (grader) & 0.509 & & & & & \\
+\bottomrule
+\end{tabular}
+\end{center}
+The leaderboard score is the mean of the three models the grader trains (seeds 0, 1 and 2), with the lowest and highest in brackets; the grader's validation is their mean on \texttt{data/starter/val}.
+
+\subsection*{Track B}
 \begin{center}\footnotesize
 \begin{tabular}{llrrrrrr}
 \toprule
@@ -276,13 +284,7 @@ track-b-3 (track\_b\_balanced\_epochs) & leaderboard & 0.404 & 0.55 & 0.29 & 0.6
 \end{tabular}
 \end{center}
 
-\subsection*{Your submission, as the grader sees it}
-\texttt{check\_submission.py --no-val} on the files of release track-b-3:
-\outputfile{outputs/check_submission.txt}
-
-% ---------------------------------------------------------------------------
-\section*{Why validation and leaderboard disagree}
-
+\subsection*{Why they disagree}
 My first thoughts, from my notes, after the first leaderboard score (only spelling and capital letters corrected):
 \begin{quote}\small
 It is different because the images are different, not the ones on which the starter recipe trained on
