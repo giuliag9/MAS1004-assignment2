@@ -66,7 +66,7 @@ The second change was applied over baseline and aimed to make the photos of the 
 Why: ``let's try to make the model train on the same amount of photo for each city. It could be useful for the model to train equally on each city photos, and it could be a good point for then observing changes and what mistakes it makes in that condition''\par
 What it means: ``This results tells me that it's good for the model to train on equal variety of photos from each city, even if it means that Seoul and Tokyo got lower score.''
 \par\medskip\noindent\textbf{balanced\_zoom} (validation 0.5089)\par
-The third change was applied over balanced (the best recipe so far) and involved apply a zoom to the photos, since many were from afar.\par
+The third change was applied over balanced (the best recipe so far) and involved applying a zoom to the photos, since many were from afar.\par
 Why: ``I think for the next change it would be good to work on balanced to maintain the improvement achieved with it and see the effects of next changes when cities are equally drawn. I think I want to try the zoom in the photos since some mistake photos in balanced are still from afar so I would still want to try since it was one of the first thing I noticed at the beginning.''\par
 What it means: ``The results tell me that adding the zoom to the balanced didn't improve the model overall, although there are some improvements for Busan and Taipei, but Seoul and Tokyo went down a bit. So the zoom was useful for some city but not for others, meaning it's not an overall change that works for all the cities. It could be kept into consideration to combine in a second moment with other changes.''
 \par\medskip\noindent\textbf{balanced\_brightness} (validation 0.5064)\par
@@ -78,7 +78,7 @@ The fifth change was based on balanced and came from the observation of the susp
 Why: ``my Step 7 rule above''\par
 What it means: ``the validation on this training was lower than the normal balanced so it makes me think that perhaps what I decided to drop and my rule was not the best choice.''
 \par\medskip\noindent\textbf{balanced\_smaller\_lr} (validation 0.5065)\par
-The sixth change was applied on balanced and aimed to making the learning rate smaller to see how it would impact the model.\par
+The sixth change was applied on balanced and aimed to make the learning rate smaller to see how it would impact the model.\par
 Why: ``I think I want to try to change the learning rate on balanced. I remember from assignment 1 that a larger learning rate was not necessarily better so in this case I would make it a bit smaller. / I wouldn't go too much lower so 2e-4 for now''\par
 What it means: ``the results of this training are lower than the balanced one, it was good for Seoul but not for Taipei. It seems like the changes I made after balanced, were less effective or were only effective for some cities but not for the overall validation.''
 \par\medskip\noindent\textbf{balanced\_zoom\_small\_lr} (validation 0.5138)\par
